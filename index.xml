@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
     <channel>
-      <title>STC/T Resources</title>
+      <title>Self-Taught CODE Tokushima Resources</title>
       <link>https://localhost:8080</link>
-      <description>最新の10件 on STC/T Resources</description>
+      <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>VR 最初の一歩</title>
+    <link>https://localhost:8080/unity/VR/vr-first-step</link>
+    <guid>https://localhost:8080/unity/VR/vr-first-step</guid>
+    <description><![CDATA[ test. ]]></description>
+    <pubDate>Fri, 23 Jan 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>_package-management</title>
     <link>https://localhost:8080/Tools/_package-management</link>
     <guid>https://localhost:8080/Tools/_package-management</guid>
@@ -30,18 +36,6 @@
     <description><![CDATA[ Roblox ここでは、Roblox に関する情報について説明します。. ]]></description>
     <pubDate>Sat, 08 Nov 2025 00:00:00 GMT</pubDate>
   </item><item>
-    <title>scratch-blocks-references</title>
-    <link>https://localhost:8080/unity/scratch/scratch-blocks-references</link>
-    <guid>https://localhost:8080/unity/scratch/scratch-blocks-references</guid>
-    <description><![CDATA[ Scratch から Unity への変換の参考資料 参考記事 Scratch → Unity対応早見表 | ゲタバコ倶楽部 (げたばこくらぶ) まだ途中のようだが、transform を用いた移動など多くの変換例がある ScratchからUnityへ | パパコーダー ブロックの変換というよりは、Scratch の動きを Unity で記述したらどうなるかの例を記載してくれている transform ではなく Rigidbody での移動を利用している . ]]></description>
-    <pubDate>Fri, 17 Oct 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>scratch-blocks</title>
-    <link>https://localhost:8080/unity/scratch/scratch-blocks</link>
-    <guid>https://localhost:8080/unity/scratch/scratch-blocks</guid>
-    <description><![CDATA[ Scratch のブロックの動きを Unity で再現する. ]]></description>
-    <pubDate>Fri, 17 Oct 2025 00:00:00 GMT</pubDate>
-  </item><item>
     <title>OpenAI Codex を Windows で利用</title>
     <link>https://localhost:8080/Tools/openai-codex</link>
     <guid>https://localhost:8080/Tools/openai-codex</guid>
@@ -65,6 +59,12 @@
     <guid>https://localhost:8080/Tools/uv</guid>
     <description><![CDATA[ uv uv は、非常に高速なPythonパッケージおよびプロジェクトマネージャーです。 MCP の実装に Python を使うプロジェクトの場合、 uv を使っているものを多くみかけます。 公式ドキュメント GitHubリポジトリ pip、pip-tools、virtualenv、venv といった既存のツール群を置き換え、単一のツールで高速な開発体験を提供することを目的としています。 pip 等のツールを使うチュートリアルを参考にしたら 上記にあげた既存のツールを使うようなチュートリアルや記事は多くあります。 もちろん、間違いを避けるためにその通りにしてもいいですが、 uv を変わりに使うこ... ]]></description>
     <pubDate>Sat, 26 Jul 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>minecraft-intro</title>
+    <link>https://localhost:8080/minecraft/minecraft-intro</link>
+    <guid>https://localhost:8080/minecraft/minecraft-intro</guid>
+    <description><![CDATA[ マインクラフト ここでは、マインクラフトに関する情報について説明します。. ]]></description>
+    <pubDate>Thu, 17 Jul 2025 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>

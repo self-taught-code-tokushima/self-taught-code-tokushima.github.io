@@ -47,14 +47,17 @@
     <loc>https://localhost:8080/ue-intro</loc>
     <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
+    <loc>https://localhost:8080/unity/VR/vr-first-step</loc>
+    <lastmod>2026-01-23T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://localhost:8080/unity/create-unity-account</loc>
     <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://localhost:8080/unity/fplk/modify-project</loc>
-    <lastmod>2025-07-17T00:00:00.000Z</lastmod>
+    <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://localhost:8080/unity/fplk/setup</loc>
-    <lastmod>2025-07-17T00:00:00.000Z</lastmod>
+    <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://localhost:8080/unity/git/git-basic</loc>
     <lastmod>2025-06-30T00:00:00.000Z</lastmod>
@@ -68,23 +71,17 @@
     <loc>https://localhost:8080/unity/git/github-copilot</loc>
     <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
-    <loc>https://localhost:8080/unity/information-gathering</loc>
-    <lastmod>2025-06-30T00:00:00.000Z</lastmod>
-  </url><url>
     <loc>https://localhost:8080/unity/install-unity-editor</loc>
     <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://localhost:8080/unity/mcp/unity-mcp</loc>
-    <lastmod>2025-07-18T00:00:00.000Z</lastmod>
+    <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://localhost:8080/unity/resources/unity-ebooks</loc>
     <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://localhost:8080/unity/scratch/scratch-blocks-references</loc>
-    <lastmod>2025-10-17T00:00:00.000Z</lastmod>
-  </url><url>
-    <loc>https://localhost:8080/unity/scratch/scratch-blocks</loc>
-    <lastmod>2025-10-17T00:00:00.000Z</lastmod>
+    <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://localhost:8080/unity/unity-dev-env</loc>
     <lastmod>2025-06-30T00:00:00.000Z</lastmod>
