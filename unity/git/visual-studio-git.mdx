@@ -1,0 +1,164 @@
+---
+date: 2025-06-30
+---
+
+# Visaul Studio で Git を使う
+
+## Unity Editor と Visual Studio の連携
+
+|確認用のプロジェクトを作成します。 Unity Version Control を使用するのチェックが外れていることを確認してください。|
+|---|
+|![alt text](../../../assets/visual-studio-git/image.png)|
+|<strong class="no-highlight">編集メニューの「環境設定」を開きます</strong>|
+|![alt text](../../../assets/visual-studio-git/image-6.png)|
+|<strong class="no-highlight">環境設定 (Preferences) の「外部ツール」タブを選び、「外部のスクリプトエディター」に `Visual Studio` が指定されていることを確認してください。</strong>|
+|![alt text](../../../assets/visual-studio-git/image-7.png)|
+|<strong class="no-highlight">Unity Editor で適当な C# スクリプトファイルを作成します</strong>|
+|![alt text](../../../assets/visual-studio-git/image-3.png)|
+|<strong class="no-highlight">スクリプト (TestScript) をダブルクリックすると Visual Studio が開きます</strong>|
+
+## Visual Studio から Unity Project の Git リポジトリを作成する
+
+|スクリプト (TestScript) をダブルクリックすると Visual Studio が開きます|
+|---|
+|![alt text](../../../assets/visual-studio-git/image-1.png)|
+|<strong class="no-highlight">画面最下部にある `ソース管理に追加` をクリックします</strong>|
+|![alt text](../../../assets/visual-studio-git/image-2.png)|
+|<strong class="no-highlight">Gitリポジトリの作成画面が表示されます</strong>|
+|![alt text](../../../assets/visual-studio-git/image-5.png)|
+|<strong class="no-highlight">ここではまずはローカルマシンにのみリポジトリを作成します。`.gitignore` テンプレートは `Unity` を指定し、リポジトリの説明資料になる `README.md` も作ってもらいます。</strong>|
+|![alt text](../../../assets/visual-studio-git/image-4.png)|
+|<strong class="no-highlight">完了すると、エクスプローラーに `.git` という隠しフォルダが作成されていることがわかります。さらに、`.gitattributes`, `.gitignore` という Git 関連のファイルに加えて、`README.md` も追加されています。</strong>|
+|![alt text](../../../assets/visual-studio-git/image-8.png)|
+|<strong class="no-highlight">再び Visual Studio に戻り、画面下段に `main` というブランチ名が表示されていれば OK です。赤枠の部分は現在のブランチのコミットを表しています。「すべてのコミットを表示する」をクリックします。</strong>|
+|![alt text](../../../assets/visual-studio-git/image-9.png)|
+|<strong class="no-highlight">すでに 2 つのコミットが作成されていることがわかります</strong>|
+|![alt text](../../../assets/visual-studio-git/image-10.png)|
+
+## ローカルにコミットする
+
+### Plane を追加する
+
+シーンビューで、Plane を追加します。
+
+![alt text](../../../assets/visual-studio-git/image-11.png)
+
+Visual Studio を見てみましょう。
+
+> [!tip] Gitのウィンドウが閉じられていたら
+> 「表示」メニューに「Git 変更」、「Git リポジトリ」があるので、そこから開きましょう。
+> ![alt text](../../../assets/visual-studio-git/image-12.png)
+
+Git 変更ウィンドウを見ると、`Plane` を追加した `SampleScene.unity` が変更されていることが分かります。
+また、`ProjectSettings/SceneTemplateSettings.json` が追加されていることも分かります。
+
+![alt text](../../../assets/visual-studio-git/image-13.png)
+
+どうして、「変更」、「追加」が判別できるかというと以下のようにファイル名の右側に `M` (Modify/変更)、`A` (Add/追加) が表記されているからです。
+
+![alt text](../../../assets/visual-studio-git/image-14.png)
+
+### スクリプトを変更する
+
+`TestScript` を以下のように `Update` にただ Z 方向にずらすだけのスクリプトを追加します。
+
+![alt text](../../../assets/visual-studio-git/image-15.png)
+
+ちなみに、これを先程の Plane にアタッチすると Z 方向にじりじりと移動します。
+
+再び 「Git 変更」ウィンドウを見ると以下のように `TestScript` が追加されています。
+
+![alt text](../../../assets/visual-studio-git/image-16.png)
+
+### 変更差分を見る
+
+「Git 変更」ウィンドウの `TestScript` をダブルクリックすると、以下のように「差分」が表示されます。
+
+![alt text](../../../assets/visual-studio-git/image-17.png)
+
+シーンファイルである `SampleScene.unity` も「差分」を見ることはできますが、YAML というファイルで構成されているため、相当慣れないと読み取れません。
+
+![alt text](../../../assets/visual-studio-git/image-18.png)
+
+今回の `SceneTemplateSettings.json` のように「追加」のファイルは差分は表示できません。
+
+### 変更をコミットする
+
+以下のように、変更の内容を説明する文を記述し、「すべてをコミット」ボタンをクリックします。
+
+![alt text](../../../assets/visual-studio-git/image-19.png)
+
+## リモートにプッシュする
+
+### Git グローバル設定
+
+`Git` メニューの「設定」を開きます。
+
+![alt text](../../../assets/visual-studio-git/image-22.png)
+
+「Git グローバル設定」を開くと以下のような画面が出てきます。
+
+![alt text](../../../assets/visual-studio-git/image-31.png)
+
+もし、ここのユーザー名/メールにすでに値が入っている場合は、マシンですでに一度 git の設定をしているということです。
+
+ここが空欄の場合は、GitHub のものと一致するユーザー名と email を入力しておきます。
+
+#### 既定の場所
+
+これは Visual Studio からリポジトリを直接クローンしたりする際のデフォルトのフォルダになります。
+
+Unity でしか使わないなら Unity のプロジェクトを配置する場所にしてもいいですが、そうでないなら適当な場所にしておきましょう。
+
+#### 参考情報
+
+- [Visual Studio での Git 設定 | Microsoft Learn](https://learn.microsoft.com/ja-jp/visualstudio/version-control/git-settings?view=vs-2022)
+
+### リモートを登録する
+
+引き続き `Git` の設定から「Git リポジトリの設定 -> リモート」を開きます。下部にある「追加」ボタンをクリックします。
+
+![alt text](../../../assets/visual-studio-git/image-20.png)
+
+追加するのは GitHub のリポジトリの以下の URL です。
+
+![alt text](../../../assets/visual-studio-git/image-23.png)
+
+もしリポジトリを作ったばかりであれば以下のような画面になりますが、同じようにコピーできます。
+
+![alt text](../../../assets/visual-studio-git/image-27.png)
+
+「リモートの追加」ダイアログに以下のように入力します。`origin` という名前は慣習的なものですが合わせておくとよいと思います。
+GitHub の画面でコピーした URL は「フェッチ」の箇所にペーストします。
+
+![alt text](../../../assets/visual-studio-git/image-21.png)
+
+保存すれば準備は完了です。
+
+### Push する
+
+複数の方法があります。「プッシュ (Push)」となっているところが対象になります。
+
+#### Git変更ウィンドウから
+
+![alt text](../../../assets/visual-studio-git/image-24.png)
+
+#### Gitリポジトリウィンドウから
+
+![alt text](../../../assets/visual-studio-git/image-25.png)
+
+#### Gitメニューから
+
+![alt text](../../../assets/visual-studio-git/image-26.png)
+
+初回の Push 時には、これまで同じ GitHub アカウントでの Git 操作がなければ以下のように GitHub の認証ダイアログが表示されます。
+
+![alt text](../../../assets/visual-studio-git/image-28.png)
+
+`Sigh in with your browser` ボタンを押すとブラウザでログイン処理か、もしすでにブラウザで GitHub にログイン済であればそれだけで認証処理は終了します。
+
+Visual Studio で以下のような表示がでれば OK です。
+
+![alt text](../../../assets/visual-studio-git/image-29.png)
+
+![alt text](../../../assets/visual-studio-git/image-30.png)

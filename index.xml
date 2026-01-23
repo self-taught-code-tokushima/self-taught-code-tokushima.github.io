@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>STC/T Resources</title>
+      <link>https://localhost:8080</link>
+      <description>最新の10件 on STC/T Resources</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>_package-management</title>
+    <link>https://localhost:8080/Tools/_package-management</link>
+    <guid>https://localhost:8080/Tools/_package-management</guid>
+    <description><![CDATA[ Package Mangement scoop や winget などの説明 XDG Base Directory zenn.dev/atsushifx/articles/winhack-environ-xdg-base. ]]></description>
+    <pubDate>Thu, 22 Jan 2026 12:51:21 GMT</pubDate>
+  </item><item>
+    <title>wsl2</title>
+    <link>https://localhost:8080/Tools/wsl2</link>
+    <guid>https://localhost:8080/Tools/wsl2</guid>
+    <description><![CDATA[  WSL 開発環境を設定する | Microsoft Learn wsl --install &gt; sudo apt update &amp;&amp; sudo apt upgrade リモート開発拡張機能パックを導入 Remote Development - Visual Studio Marketplace . ]]></description>
+    <pubDate>Thu, 22 Jan 2026 12:51:21 GMT</pubDate>
+  </item><item>
+    <title>STC/T Resources</title>
+    <link>https://localhost:8080/</link>
+    <guid>https://localhost:8080/</guid>
+    <description><![CDATA[ STC/T Resources Self-Taught CODE Tokushima のリソースサイトへようこそ。 カテゴリ Unity - Unity ゲーム開発に関するドキュメント Minecraft - Minecraft 関連のドキュメント Roblox - Roblox 開発に関するドキュメント Tools - 各種ツールの使い方 Research - 調査・研究 . ]]></description>
+    <pubDate>Thu, 22 Jan 2026 12:51:21 GMT</pubDate>
+  </item><item>
+    <title>roblox-intro</title>
+    <link>https://localhost:8080/roblox/roblox-intro</link>
+    <guid>https://localhost:8080/roblox/roblox-intro</guid>
+    <description><![CDATA[ Roblox ここでは、Roblox に関する情報について説明します。. ]]></description>
+    <pubDate>Sat, 08 Nov 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>scratch-blocks-references</title>
+    <link>https://localhost:8080/unity/scratch/scratch-blocks-references</link>
+    <guid>https://localhost:8080/unity/scratch/scratch-blocks-references</guid>
+    <description><![CDATA[ Scratch から Unity への変換の参考資料 参考記事 Scratch → Unity対応早見表 | ゲタバコ倶楽部 (げたばこくらぶ) まだ途中のようだが、transform を用いた移動など多くの変換例がある ScratchからUnityへ | パパコーダー ブロックの変換というよりは、Scratch の動きを Unity で記述したらどうなるかの例を記載してくれている transform ではなく Rigidbody での移動を利用している . ]]></description>
+    <pubDate>Fri, 17 Oct 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>scratch-blocks</title>
+    <link>https://localhost:8080/unity/scratch/scratch-blocks</link>
+    <guid>https://localhost:8080/unity/scratch/scratch-blocks</guid>
+    <description><![CDATA[ Scratch のブロックの動きを Unity で再現する. ]]></description>
+    <pubDate>Fri, 17 Oct 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>OpenAI Codex を Windows で利用</title>
+    <link>https://localhost:8080/Tools/openai-codex</link>
+    <guid>https://localhost:8080/Tools/openai-codex</guid>
+    <description><![CDATA[ OpenAI の Codex の Windows 環境での基本的な使い方を見ていきます。 ]]></description>
+    <pubDate>Mon, 22 Sep 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Meta Quest 3 を Mixed Reality Link で Windows 11 と接続</title>
+    <link>https://localhost:8080/Tools/setup-mixed-reality-link-quest3</link>
+    <guid>https://localhost:8080/Tools/setup-mixed-reality-link-quest3</guid>
+    <description><![CDATA[ Meta Quest 3 を Mixed Reality Link で Windows 11 とリモートデスクトップ接続する方法を解説しています。 ]]></description>
+    <pubDate>Fri, 19 Sep 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>minecraft-bedrock-command-mcp</title>
+    <link>https://localhost:8080/minecraft/mcp/minecraft-bedrock-command-mcp</link>
+    <guid>https://localhost:8080/minecraft/mcp/minecraft-bedrock-command-mcp</guid>
+    <description><![CDATA[ Minecraft Bedrock (統合版) 用の MCP サーバーである minecraft-bedrock-command-mcp の使い方を紹介します ]]></description>
+    <pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>uv</title>
+    <link>https://localhost:8080/Tools/uv</link>
+    <guid>https://localhost:8080/Tools/uv</guid>
+    <description><![CDATA[ uv uv は、非常に高速なPythonパッケージおよびプロジェクトマネージャーです。 MCP の実装に Python を使うプロジェクトの場合、 uv を使っているものを多くみかけます。 公式ドキュメント GitHubリポジトリ pip、pip-tools、virtualenv、venv といった既存のツール群を置き換え、単一のツールで高速な開発体験を提供することを目的としています。 pip 等のツールを使うチュートリアルを参考にしたら 上記にあげた既存のツールを使うようなチュートリアルや記事は多くあります。 もちろん、間違いを避けるためにその通りにしてもいいですが、 uv を変わりに使うこ... ]]></description>
+    <pubDate>Sat, 26 Jul 2025 00:00:00 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>

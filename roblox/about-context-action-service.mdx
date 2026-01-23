@@ -1,0 +1,30 @@
+---
+date: 2025-11-08
+---
+
+# Roblox の ContextActionService
+
+[ContextActionService | 文書 - Roblox クリエーターハブ](https://create.roblox.com/docs/ja-jp/reference/engine/classes/ContextActionService#summary-events)
+
+`Context` (文脈・状況)　に応じて、`Action` つまり何ができるかを管理しています。
+
+## アクションの確認
+
+具体的にどういうアクションが登録されているのか見るには、テストプレイ中に `F9` を押します。 (公式資料の「結びつけられたアクションの確認」を参照)
+
+最初は `Logs` になっているので `ActionBindings` に変更します。
+
+![alt text](../../assets/about-context-action-service/image.png)
+
+最も右の列の `Input.Types` は [Enum.KeyCode](https://create.roblox.com/docs/ja-jp/reference/engine/enums/KeyCode), [Enum.UserInputType](https://create.roblox.com/docs/ja-jp/reference/engine/enums/UserInputType), [Enum.PlayerActions](https://create.roblox.com/docs/ja-jp/reference/engine/enums/PlayerActions) のいずれかです。どういう入力になっているかはこれで確認できます。
+
+そして `Action Name` を使うことで入力を無効化したり (ジャンプできないようにする) や、動作を上書きすることができるようになります。
+
+- [BindAction｜ContextActionService | 文書 - Roblox クリエーターハブ](https://create.roblox.com/docs/ja-jp/reference/engine/classes/ContextActionService#BindAction)
+- [UnbindAction｜ContextActionService | 文書 - Roblox クリエーターハブ](https://create.roblox.com/docs/ja-jp/reference/engine/classes/ContextActionService#UnbindAction)
+
+### デフォルトのバインド済アクション
+
+- [デフォルトのバインディング | 入力 | 文書 - Roblox クリエーターハブ](https://create.roblox.com/docs/ja-jp/input#%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%81%AE%E3%83%90%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0)
+
+上記に表でまとまっています。英語にした方が `Action` 名はわかりやすいかもしれません。
