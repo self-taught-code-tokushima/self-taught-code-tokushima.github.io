@@ -2,67 +2,67 @@
 <rss version="2.0">
     <channel>
       <title>Self-Taught CODE Tokushima Resources</title>
-      <link>https://localhost:8080</link>
+      <link>https://docs.self-taught-code-tokushima.com</link>
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
     <title>【Unity Learn】 Create With VR Course</title>
-    <link>https://localhost:8080/unity/VR/create-with-vr-course</link>
-    <guid>https://localhost:8080/unity/VR/create-with-vr-course</guid>
+    <link>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course</link>
+    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course</guid>
     <description><![CDATA[ Create With VR Course Unity Learn の Create with VR コースの実施ログです。このコースは動画も豊富なので迷うことはあまりありません。 Create with VR 実施環境 Unity 6.3 Meta Quest 3 VR Software Setup VR Software Setup - Unity Learn 4. ]]></description>
     <pubDate>Fri, 23 Jan 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>_package-management</title>
-    <link>https://localhost:8080/Tools/_package-management</link>
-    <guid>https://localhost:8080/Tools/_package-management</guid>
+    <link>https://docs.self-taught-code-tokushima.com/Tools/_package-management</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Tools/_package-management</guid>
     <description><![CDATA[ Package Mangement scoop や winget などの説明 XDG Base Directory zenn.dev/atsushifx/articles/winhack-environ-xdg-base. ]]></description>
     <pubDate>Thu, 22 Jan 2026 12:51:21 GMT</pubDate>
   </item><item>
     <title>wsl2</title>
-    <link>https://localhost:8080/Tools/wsl2</link>
-    <guid>https://localhost:8080/Tools/wsl2</guid>
+    <link>https://docs.self-taught-code-tokushima.com/Tools/wsl2</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Tools/wsl2</guid>
     <description><![CDATA[  WSL 開発環境を設定する | Microsoft Learn wsl --install &gt; sudo apt update &amp;&amp; sudo apt upgrade リモート開発拡張機能パックを導入 Remote Development - Visual Studio Marketplace . ]]></description>
     <pubDate>Thu, 22 Jan 2026 12:51:21 GMT</pubDate>
   </item><item>
     <title>STC/T Resources</title>
-    <link>https://localhost:8080/</link>
-    <guid>https://localhost:8080/</guid>
+    <link>https://docs.self-taught-code-tokushima.com/</link>
+    <guid>https://docs.self-taught-code-tokushima.com/</guid>
     <description><![CDATA[ STC/T Resources Self-Taught CODE Tokushima のリソースサイトへようこそ。 カテゴリ Unity - Unity ゲーム開発に関するドキュメント Minecraft - Minecraft 関連のドキュメント Roblox - Roblox 開発に関するドキュメント Tools - 各種ツールの使い方 Research - 調査・研究 . ]]></description>
     <pubDate>Thu, 22 Jan 2026 12:51:21 GMT</pubDate>
   </item><item>
     <title>roblox-intro</title>
-    <link>https://localhost:8080/roblox/roblox-intro</link>
-    <guid>https://localhost:8080/roblox/roblox-intro</guid>
+    <link>https://docs.self-taught-code-tokushima.com/roblox/roblox-intro</link>
+    <guid>https://docs.self-taught-code-tokushima.com/roblox/roblox-intro</guid>
     <description><![CDATA[ Roblox ここでは、Roblox に関する情報について説明します。. ]]></description>
     <pubDate>Sat, 08 Nov 2025 00:00:00 GMT</pubDate>
   </item><item>
     <title>OpenAI Codex を Windows で利用</title>
-    <link>https://localhost:8080/Tools/openai-codex</link>
-    <guid>https://localhost:8080/Tools/openai-codex</guid>
+    <link>https://docs.self-taught-code-tokushima.com/Tools/openai-codex</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Tools/openai-codex</guid>
     <description><![CDATA[ OpenAI の Codex の Windows 環境での基本的な使い方を見ていきます。 ]]></description>
     <pubDate>Mon, 22 Sep 2025 00:00:00 GMT</pubDate>
   </item><item>
     <title>Meta Quest 3 を Mixed Reality Link で Windows 11 と接続</title>
-    <link>https://localhost:8080/Tools/setup-mixed-reality-link-quest3</link>
-    <guid>https://localhost:8080/Tools/setup-mixed-reality-link-quest3</guid>
+    <link>https://docs.self-taught-code-tokushima.com/Tools/setup-mixed-reality-link-quest3</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Tools/setup-mixed-reality-link-quest3</guid>
     <description><![CDATA[ Meta Quest 3 を Mixed Reality Link で Windows 11 とリモートデスクトップ接続する方法を解説しています。 ]]></description>
     <pubDate>Fri, 19 Sep 2025 00:00:00 GMT</pubDate>
   </item><item>
     <title>minecraft-bedrock-command-mcp</title>
-    <link>https://localhost:8080/minecraft/mcp/minecraft-bedrock-command-mcp</link>
-    <guid>https://localhost:8080/minecraft/mcp/minecraft-bedrock-command-mcp</guid>
+    <link>https://docs.self-taught-code-tokushima.com/minecraft/mcp/minecraft-bedrock-command-mcp</link>
+    <guid>https://docs.self-taught-code-tokushima.com/minecraft/mcp/minecraft-bedrock-command-mcp</guid>
     <description><![CDATA[ Minecraft Bedrock (統合版) 用の MCP サーバーである minecraft-bedrock-command-mcp の使い方を紹介します ]]></description>
     <pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate>
   </item><item>
     <title>uv</title>
-    <link>https://localhost:8080/Tools/uv</link>
-    <guid>https://localhost:8080/Tools/uv</guid>
+    <link>https://docs.self-taught-code-tokushima.com/Tools/uv</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Tools/uv</guid>
     <description><![CDATA[ uv uv は、非常に高速なPythonパッケージおよびプロジェクトマネージャーです。 MCP の実装に Python を使うプロジェクトの場合、 uv を使っているものを多くみかけます。 公式ドキュメント GitHubリポジトリ pip、pip-tools、virtualenv、venv といった既存のツール群を置き換え、単一のツールで高速な開発体験を提供することを目的としています。 pip 等のツールを使うチュートリアルを参考にしたら 上記にあげた既存のツールを使うようなチュートリアルや記事は多くあります。 もちろん、間違いを避けるためにその通りにしてもいいですが、 uv を変わりに使うこ... ]]></description>
     <pubDate>Sat, 26 Jul 2025 00:00:00 GMT</pubDate>
   </item><item>
     <title>minecraft-intro</title>
-    <link>https://localhost:8080/minecraft/minecraft-intro</link>
-    <guid>https://localhost:8080/minecraft/minecraft-intro</guid>
+    <link>https://docs.self-taught-code-tokushima.com/minecraft/minecraft-intro</link>
+    <guid>https://docs.self-taught-code-tokushima.com/minecraft/minecraft-intro</guid>
     <description><![CDATA[ マインクラフト ここでは、マインクラフトに関する情報について説明します。. ]]></description>
     <pubDate>Thu, 17 Jul 2025 00:00:00 GMT</pubDate>
   </item>
