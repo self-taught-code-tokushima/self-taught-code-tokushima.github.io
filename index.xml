@@ -6,65 +6,65 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>STC/T Resources</title>
+    <link>https://docs.self-taught-code-tokushima.com/</link>
+    <guid>https://docs.self-taught-code-tokushima.com/</guid>
+    <description><![CDATA[ STC/T Resources Self-Taught CODE Tokushima のリソースサイトへようこそ。 カテゴリ Unity - Unity ゲーム開発に関するドキュメント Minecraft - Minecraft 関連のドキュメント Roblox - Roblox 開発に関するドキュメント Tools - 各種ツールの使い方 Research - 調査・研究 . ]]></description>
+    <pubDate>Sun, 25 Jan 2026 14:24:35 GMT</pubDate>
+  </item><item>
     <title>【Unity Learn】 Create With VR Course</title>
     <link>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course</link>
     <guid>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course</guid>
     <description><![CDATA[ Create With VR Course Unity Learn の Create with VR コースの実施ログです。このコースは動画も豊富なので迷うことはあまりありません。 Create with VR 実施環境 Unity 6.3 Meta Quest 3 VR Software Setup VR Software Setup - Unity Learn 4. ]]></description>
     <pubDate>Fri, 23 Jan 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>_package-management</title>
-    <link>https://docs.self-taught-code-tokushima.com/Tools/_package-management</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Tools/_package-management</guid>
-    <description><![CDATA[ Package Mangement scoop や winget などの説明 XDG Base Directory zenn.dev/atsushifx/articles/winhack-environ-xdg-base. ]]></description>
-    <pubDate>Thu, 22 Jan 2026 12:51:21 GMT</pubDate>
+    <title>Roblox 2D ゲームクイックスタート</title>
+    <link>https://docs.self-taught-code-tokushima.com/Roblox/2d-quickstart</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Roblox/2d-quickstart</guid>
+    <description><![CDATA[ Roblox 2D ゲームクイックスタート カメラと動きの制限 今回は StarterPlayer/StarterCharacterScripts に CameraScript をローカルスクリプト (LocalScript) として追加します。 プレイヤーの動作を左右方向のみに制限する カメラをプレイヤーへの追随ではなくスクリプト制御 (Scriptable) にしプレイヤーの位置に手動で追随させる CameraScriptlocal Camera = game.Workspace.CurrentCamera local ContextActionService = game:GetServ... ]]></description>
+    <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
   </item><item>
-    <title>wsl2</title>
-    <link>https://docs.self-taught-code-tokushima.com/Tools/wsl2</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Tools/wsl2</guid>
-    <description><![CDATA[  WSL 開発環境を設定する | Microsoft Learn wsl --install &gt; sudo apt update &amp;&amp; sudo apt upgrade リモート開発拡張機能パックを導入 Remote Development - Visual Studio Marketplace . ]]></description>
-    <pubDate>Thu, 22 Jan 2026 12:51:21 GMT</pubDate>
+    <title>Roblox の ContextActionService</title>
+    <link>https://docs.self-taught-code-tokushima.com/Roblox/about-context-action-service</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Roblox/about-context-action-service</guid>
+    <description><![CDATA[ Roblox の ContextActionService ContextActionService | 文書 - Roblox クリエーターハブ Context (文脈・状況) に応じて、Action つまり何ができるかを管理しています。 アクションの確認 具体的にどういうアクションが登録されているのか見るには、テストプレイ中に F9 を押します。 (公式資料の「結びつけられたアクションの確認」を参照) 最初は Logs になっているので ActionBindings に変更します。 最も右の列の Input.Types は Enum.KeyCode, Enum.UserInputType,... ]]></description>
+    <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
   </item><item>
-    <title>STC/T Resources</title>
-    <link>https://docs.self-taught-code-tokushima.com/</link>
-    <guid>https://docs.self-taught-code-tokushima.com/</guid>
-    <description><![CDATA[ STC/T Resources Self-Taught CODE Tokushima のリソースサイトへようこそ。 カテゴリ Unity - Unity ゲーム開発に関するドキュメント Minecraft - Minecraft 関連のドキュメント Roblox - Roblox 開発に関するドキュメント Tools - 各種ツールの使い方 Research - 調査・研究 . ]]></description>
-    <pubDate>Thu, 22 Jan 2026 12:51:21 GMT</pubDate>
-  </item><item>
-    <title>roblox-intro</title>
-    <link>https://docs.self-taught-code-tokushima.com/roblox/roblox-intro</link>
-    <guid>https://docs.self-taught-code-tokushima.com/roblox/roblox-intro</guid>
+    <title>Roblox</title>
+    <link>https://docs.self-taught-code-tokushima.com/Roblox/</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Roblox/</guid>
     <description><![CDATA[ Roblox ここでは、Roblox に関する情報について説明します。. ]]></description>
-    <pubDate>Sat, 08 Nov 2025 00:00:00 GMT</pubDate>
+    <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Git Credential Manager</title>
+    <link>https://docs.self-taught-code-tokushima.com/Tools/git-credential-manager</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Tools/git-credential-manager</guid>
+    <description><![CDATA[ Git Credential Manager Git for Windows を使った場合の資格情報の保存 git pull などリモートとの接続をすると初回接続時には以下のように CredentialHelperSelector が表示されます。 manager を選択すると GitHub への接続ウィンドウが開きます。 ここで Sign in with your browser ボタンをクリックします。 すると、ブラウザが開きます。 もしブラウザで GitHub にログインしていなければ以下のようにログイン画面が表示されます。 ログインが完了するか、すでにログイン済であればブラウザは真っ暗... ]]></description>
+    <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Tools</title>
+    <link>https://docs.self-taught-code-tokushima.com/Tools/</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Tools/</guid>
+    <description><![CDATA[ ツール ここでは、特定の開発環境とは関係のないツールについて説明します。. ]]></description>
+    <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
   </item><item>
     <title>OpenAI Codex を Windows で利用</title>
     <link>https://docs.self-taught-code-tokushima.com/Tools/openai-codex</link>
     <guid>https://docs.self-taught-code-tokushima.com/Tools/openai-codex</guid>
     <description><![CDATA[ OpenAI の Codex の Windows 環境での基本的な使い方を見ていきます。 ]]></description>
-    <pubDate>Mon, 22 Sep 2025 00:00:00 GMT</pubDate>
+    <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
   </item><item>
     <title>Meta Quest 3 を Mixed Reality Link で Windows 11 と接続</title>
     <link>https://docs.self-taught-code-tokushima.com/Tools/setup-mixed-reality-link-quest3</link>
     <guid>https://docs.self-taught-code-tokushima.com/Tools/setup-mixed-reality-link-quest3</guid>
     <description><![CDATA[ Meta Quest 3 を Mixed Reality Link で Windows 11 とリモートデスクトップ接続する方法を解説しています。 ]]></description>
-    <pubDate>Fri, 19 Sep 2025 00:00:00 GMT</pubDate>
+    <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
   </item><item>
-    <title>minecraft-bedrock-command-mcp</title>
-    <link>https://docs.self-taught-code-tokushima.com/minecraft/mcp/minecraft-bedrock-command-mcp</link>
-    <guid>https://docs.self-taught-code-tokushima.com/minecraft/mcp/minecraft-bedrock-command-mcp</guid>
-    <description><![CDATA[ Minecraft Bedrock (統合版) 用の MCP サーバーである minecraft-bedrock-command-mcp の使い方を紹介します ]]></description>
-    <pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>uv</title>
-    <link>https://docs.self-taught-code-tokushima.com/Tools/uv</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Tools/uv</guid>
-    <description><![CDATA[ uv uv は、非常に高速なPythonパッケージおよびプロジェクトマネージャーです。 MCP の実装に Python を使うプロジェクトの場合、 uv を使っているものを多くみかけます。 公式ドキュメント GitHubリポジトリ pip、pip-tools、virtualenv、venv といった既存のツール群を置き換え、単一のツールで高速な開発体験を提供することを目的としています。 pip 等のツールを使うチュートリアルを参考にしたら 上記にあげた既存のツールを使うようなチュートリアルや記事は多くあります。 もちろん、間違いを避けるためにその通りにしてもいいですが、 uv を変わりに使うこ... ]]></description>
-    <pubDate>Sat, 26 Jul 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>minecraft-intro</title>
-    <link>https://docs.self-taught-code-tokushima.com/minecraft/minecraft-intro</link>
-    <guid>https://docs.self-taught-code-tokushima.com/minecraft/minecraft-intro</guid>
-    <description><![CDATA[ マインクラフト ここでは、マインクラフトに関する情報について説明します。. ]]></description>
-    <pubDate>Thu, 17 Jul 2025 00:00:00 GMT</pubDate>
+    <title>ターミナル</title>
+    <link>https://docs.self-taught-code-tokushima.com/Tools/terminal</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Tools/terminal</guid>
+    <description><![CDATA[ ターミナル ターミナルというのは、文字で書かれた命令（コマンド）を入力して、コンピューターに何かを実行してもらうための特別な画面のことです。 ここでは難しいコマンドの詳しい説明はせず、皆さんがこれから学習していく中で使う可能性のあるターミナル環境を紹介します。 コマンドとはなにか？ コマンドとは、コンピューターに「これをやってね」とお願いするための指示のことです。 例えば、「ファイルをコピーして」とか「フォルダを作って」といったことを、文字で入力して伝えます。 普段はマウスやタッチパネルで操作することが多いですが、コマンドを使うと、もっと細かい操作や自動化ができるようになります。 ちょっと難し... ]]></description>
+    <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>

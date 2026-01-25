@@ -1,48 +1,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-    <loc>https://docs.self-taught-code-tokushima.com/Tools/_package-management</loc>
-    <lastmod>2026-01-22T12:51:21.000Z</lastmod>
+    <loc>https://docs.self-taught-code-tokushima.com/Roblox/2d-quickstart</loc>
+    <lastmod>2025-06-30T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://docs.self-taught-code-tokushima.com/Roblox/about-context-action-service</loc>
+    <lastmod>2025-06-30T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://docs.self-taught-code-tokushima.com/Roblox/</loc>
+    <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://docs.self-taught-code-tokushima.com/Tools/git-credential-manager</loc>
     <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
-    <loc>https://docs.self-taught-code-tokushima.com/Tools/mise</loc>
+    <loc>https://docs.self-taught-code-tokushima.com/Tools/</loc>
     <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://docs.self-taught-code-tokushima.com/Tools/openai-codex</loc>
-    <lastmod>2025-09-22T00:00:00.000Z</lastmod>
-  </url><url>
-    <loc>https://docs.self-taught-code-tokushima.com/Tools/others-intro</loc>
     <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://docs.self-taught-code-tokushima.com/Tools/setup-mixed-reality-link-quest3</loc>
-    <lastmod>2025-09-19T00:00:00.000Z</lastmod>
+    <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://docs.self-taught-code-tokushima.com/Tools/terminal</loc>
     <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://docs.self-taught-code-tokushima.com/Tools/uv</loc>
-    <lastmod>2025-07-26T00:00:00.000Z</lastmod>
+    <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://docs.self-taught-code-tokushima.com/Tools/wsl2</loc>
-    <lastmod>2026-01-22T12:51:21.000Z</lastmod>
+    <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://docs.self-taught-code-tokushima.com/</loc>
-    <lastmod>2026-01-22T12:51:21.000Z</lastmod>
+    <lastmod>2026-01-25T14:24:35.000Z</lastmod>
+  </url><url>
+    <loc>https://docs.self-taught-code-tokushima.com/minecraft/</loc>
+    <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://docs.self-taught-code-tokushima.com/minecraft/mcp/minecraft-bedrock-command-mcp</loc>
-    <lastmod>2025-07-30T00:00:00.000Z</lastmod>
+    <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
-    <loc>https://docs.self-taught-code-tokushima.com/minecraft/minecraft-intro</loc>
-    <lastmod>2025-07-17T00:00:00.000Z</lastmod>
+    <loc>https://docs.self-taught-code-tokushima.com/research/</loc>
+    <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://docs.self-taught-code-tokushima.com/research/notebooklm</loc>
     <lastmod>2025-06-30T00:00:00.000Z</lastmod>
-  </url><url>
-    <loc>https://docs.self-taught-code-tokushima.com/research/research-intro</loc>
-    <lastmod>2025-06-30T00:00:00.000Z</lastmod>
-  </url><url>
-    <loc>https://docs.self-taught-code-tokushima.com/roblox/roblox-intro</loc>
-    <lastmod>2025-11-08T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://docs.self-taught-code-tokushima.com/ue-intro</loc>
     <lastmod>2025-06-30T00:00:00.000Z</lastmod>
@@ -71,6 +71,9 @@
     <loc>https://docs.self-taught-code-tokushima.com/unity/git/github-copilot</loc>
     <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
+    <loc>https://docs.self-taught-code-tokushima.com/unity/</loc>
+    <lastmod>2025-06-30T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://docs.self-taught-code-tokushima.com/unity/install-unity-editor</loc>
     <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
@@ -90,9 +93,6 @@
     <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://docs.self-taught-code-tokushima.com/unity/unity-ignore-folder-from-ms-defender</loc>
-    <lastmod>2025-06-30T00:00:00.000Z</lastmod>
-  </url><url>
-    <loc>https://docs.self-taught-code-tokushima.com/unity/unity-intro</loc>
     <lastmod>2025-06-30T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://docs.self-taught-code-tokushima.com/unity/unity-student</loc>
