@@ -6,6 +6,12 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Unreal Engine で参照できるプロジェクト</title>
+    <link>https://docs.self-taught-code-tokushima.com/UnrealEngine/reference-projects</link>
+    <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/reference-projects</guid>
+    <description><![CDATA[ Unreal Engine で参照できるプロジェクト Unreal Engine で無料で参照できるプロジェクトを集めています。 特定のトピックを扱うようなプロジェクトには GAS のようなトピックタグを付けています。 dev.epicgames.com/documentation/en-us/unreal-engine/lyra-sample-game-in-unreal-engine Lyra Sample Game Lyra is a learning resource designed as a sample game project to help you understand th... ]]></description>
+    <pubDate>Tue, 10 Feb 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>STC/T Resources</title>
     <link>https://docs.self-taught-code-tokushima.com/</link>
     <guid>https://docs.self-taught-code-tokushima.com/</guid>
@@ -58,12 +64,6 @@
     <link>https://docs.self-taught-code-tokushima.com/Tools/setup-mixed-reality-link-quest3</link>
     <guid>https://docs.self-taught-code-tokushima.com/Tools/setup-mixed-reality-link-quest3</guid>
     <description><![CDATA[ Meta Quest 3 を Mixed Reality Link で Windows 11 とリモートデスクトップ接続する方法を解説しています。 ]]></description>
-    <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>ターミナル</title>
-    <link>https://docs.self-taught-code-tokushima.com/Tools/terminal</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Tools/terminal</guid>
-    <description><![CDATA[ ターミナル ターミナルというのは、文字で書かれた命令（コマンド）を入力して、コンピューターに何かを実行してもらうための特別な画面のことです。 ここでは難しいコマンドの詳しい説明はせず、皆さんがこれから学習していく中で使う可能性のあるターミナル環境を紹介します。 コマンドとはなにか？ コマンドとは、コンピューターに「これをやってね」とお願いするための指示のことです。 例えば、「ファイルをコピーして」とか「フォルダを作って」といったことを、文字で入力して伝えます。 普段はマウスやタッチパネルで操作することが多いですが、コマンドを使うと、もっと細かい操作や自動化ができるようになります。 ちょっと難し... ]]></description>
     <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
   </item>
     </channel>
