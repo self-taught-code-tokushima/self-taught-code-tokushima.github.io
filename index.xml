@@ -6,6 +6,12 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>PowerShell コマンド</title>
+    <link>https://docs.self-taught-code-tokushima.com/Tools/powershell-commands</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Tools/powershell-commands</guid>
+    <description><![CDATA[ シンボリックリンク New-Item -ItemType SymbolicLink -Path リンク先 -Value リンク元 New-Item (Microsoft.PowerShell.Management) - PowerShell | Microsoft Learn [PowerShell] シンボリックリンクを作るメモ PowerShell - Qiita 参考 fleschutz/PowerShell: 600+ free PowerShell scripts (.ps1) for Linux, macOS, and Windows. ]]></description>
+    <pubDate>Tue, 10 Feb 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>Unreal Engine で参照できるプロジェクト</title>
     <link>https://docs.self-taught-code-tokushima.com/UnrealEngine/reference-projects</link>
     <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/reference-projects</guid>
@@ -58,12 +64,6 @@
     <link>https://docs.self-taught-code-tokushima.com/Tools/openai-codex</link>
     <guid>https://docs.self-taught-code-tokushima.com/Tools/openai-codex</guid>
     <description><![CDATA[ OpenAI の Codex の Windows 環境での基本的な使い方を見ていきます。 ]]></description>
-    <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Meta Quest 3 を Mixed Reality Link で Windows 11 と接続</title>
-    <link>https://docs.self-taught-code-tokushima.com/Tools/setup-mixed-reality-link-quest3</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Tools/setup-mixed-reality-link-quest3</guid>
-    <description><![CDATA[ Meta Quest 3 を Mixed Reality Link で Windows 11 とリモートデスクトップ接続する方法を解説しています。 ]]></description>
     <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
   </item>
     </channel>
