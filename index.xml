@@ -6,6 +6,12 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>STC/T Resources</title>
+    <link>https://docs.self-taught-code-tokushima.com/</link>
+    <guid>https://docs.self-taught-code-tokushima.com/</guid>
+    <description><![CDATA[ STC/T Resources Self-Taught CODE Tokushima のリソースサイトへようこそ。 カテゴリ Unity - Unity ゲーム開発に関するドキュメント Minecraft - Minecraft 関連のドキュメント Roblox - Roblox 開発に関するドキュメント Tools - 各種ツールの使い方 Research - 調査・研究 . ]]></description>
+    <pubDate>Thu, 12 Feb 2026 09:33:20 GMT</pubDate>
+  </item><item>
     <title>⚡ Roblox Studio の更新情報</title>
     <link>https://docs.self-taught-code-tokushima.com/Roblox/Updates-Roblox-Studio</link>
     <guid>https://docs.self-taught-code-tokushima.com/Roblox/Updates-Roblox-Studio</guid>
@@ -47,12 +53,6 @@
     <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/reference-projects</guid>
     <description><![CDATA[ Unreal Engine で参照できるプロジェクト Unreal Engine で無料で参照できるプロジェクトを集めています。 特定のトピックを扱うようなプロジェクトには GAS のようなトピックタグを付けています。 dev.epicgames.com/documentation/en-us/unreal-engine/lyra-sample-game-in-unreal-engine Lyra Sample Game Lyra is a learning resource designed as a sample game project to help you understand th... ]]></description>
     <pubDate>Tue, 10 Feb 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>STC/T Resources</title>
-    <link>https://docs.self-taught-code-tokushima.com/</link>
-    <guid>https://docs.self-taught-code-tokushima.com/</guid>
-    <description><![CDATA[ STC/T Resources Self-Taught CODE Tokushima のリソースサイトへようこそ。 カテゴリ Unity - Unity ゲーム開発に関するドキュメント Minecraft - Minecraft 関連のドキュメント Roblox - Roblox 開発に関するドキュメント Tools - 各種ツールの使い方 Research - 調査・研究 . ]]></description>
-    <pubDate>Sun, 25 Jan 2026 14:24:35 GMT</pubDate>
   </item><item>
     <title>【Unity Learn】 Create With VR Course</title>
     <link>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course</link>
