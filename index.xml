@@ -6,6 +6,36 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>🆙 Roblox Studio の更新情報</title>
+    <link>https://docs.self-taught-code-tokushima.com/Roblox/Updates-Roblox-Studio</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Roblox/Updates-Roblox-Studio</guid>
+    <description><![CDATA[  最新 Updates トピック - Developer Forum | Roblox . ]]></description>
+    <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>🆙 UEFN の更新情報</title>
+    <link>https://docs.self-taught-code-tokushima.com/UEFN/Updates-UEFN</link>
+    <guid>https://docs.self-taught-code-tokushima.com/UEFN/Updates-UEFN</guid>
+    <description><![CDATA[  Unreal Editor for Fortnite の最新情報 | Fortnite ドキュメンテーション | Epic Developer Community . ]]></description>
+    <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>🆙 Unreal Engine の更新情報</title>
+    <link>https://docs.self-taught-code-tokushima.com/UnrealEngine/Updates-Unreal-Engine</link>
+    <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/Updates-Unreal-Engine</guid>
+    <description><![CDATA[  Unreal Engine 更新履歴 | UE5攻略リンク 公式サイトではありませんが、日本語の情報でもっともまとまっています 公式サイトは更新情報だけの一覧がありませんが、一つ開くとドロップダウンでバージョンを選択できます Unreal Engine 5.7 リリース ノート | Unreal Engine 5.7 ドキュメンテーション | Epic Developer Community Unreal Engine 5.6 リリース ノート | Unreal Engine 5.6 ドキュメンテーション | Epic Developer Community . ]]></description>
+    <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>🆙 Minecraft Bedrock の更新情報</title>
+    <link>https://docs.self-taught-code-tokushima.com/minecraft/Updates-Minecraft-Bedrock</link>
+    <guid>https://docs.self-taught-code-tokushima.com/minecraft/Updates-Minecraft-Bedrock</guid>
+    <description><![CDATA[  Release Changelogs – Minecraft Feedback Minecraft Bedrock Stable APIs 1.26.0 Update Notes | Microsoft Learn 1.21.130 Update Notes | Microsoft Learn 2026 年からのバージョン体系の変化 Minecraft の新しいバージョン番号システム | Minecraft 2026 年から急に 1.26.x になっている理由です . ]]></description>
+    <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>🆙 Unity の更新情報</title>
+    <link>https://docs.self-taught-code-tokushima.com/unity/Updates-Unity</link>
+    <guid>https://docs.self-taught-code-tokushima.com/unity/Updates-Unity</guid>
+    <description><![CDATA[  以下のページが最新のリリースノートになるが、必ず最新のバージョンページに自動で移動する unity.com/ja/releases/editor/whats-new 現時点では 6000.2.8f1 のページにリダイレクトされる Unity 6000.3.8f1 各バージョンの詳細な情報を見るには以下の unity3d.com の方のページを見る こちらもその時点の最新版が表示される Unity - Manual: Unity 6.3 User Manual 各バージョンの差分を確認するには以下のサイトが役に立ちます。unity3d.com にある公式のものです。 Unity Release... ]]></description>
+    <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>PowerShell コマンド</title>
     <link>https://docs.self-taught-code-tokushima.com/Tools/powershell-commands</link>
     <guid>https://docs.self-taught-code-tokushima.com/Tools/powershell-commands</guid>
@@ -34,36 +64,6 @@
     <link>https://docs.self-taught-code-tokushima.com/Roblox/2d-quickstart</link>
     <guid>https://docs.self-taught-code-tokushima.com/Roblox/2d-quickstart</guid>
     <description><![CDATA[ Roblox 2D ゲームクイックスタート カメラと動きの制限 今回は StarterPlayer/StarterCharacterScripts に CameraScript をローカルスクリプト (LocalScript) として追加します。 プレイヤーの動作を左右方向のみに制限する カメラをプレイヤーへの追随ではなくスクリプト制御 (Scriptable) にしプレイヤーの位置に手動で追随させる CameraScriptlocal Camera = game.Workspace.CurrentCamera local ContextActionService = game:GetServ... ]]></description>
-    <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Roblox の ContextActionService</title>
-    <link>https://docs.self-taught-code-tokushima.com/Roblox/about-context-action-service</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Roblox/about-context-action-service</guid>
-    <description><![CDATA[ Roblox の ContextActionService ContextActionService | 文書 - Roblox クリエーターハブ Context (文脈・状況) に応じて、Action つまり何ができるかを管理しています。 アクションの確認 具体的にどういうアクションが登録されているのか見るには、テストプレイ中に F9 を押します。 (公式資料の「結びつけられたアクションの確認」を参照) 最初は Logs になっているので ActionBindings に変更します。 最も右の列の Input.Types は Enum.KeyCode, Enum.UserInputType,... ]]></description>
-    <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Roblox</title>
-    <link>https://docs.self-taught-code-tokushima.com/Roblox/</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Roblox/</guid>
-    <description><![CDATA[ Roblox ここでは、Roblox に関する情報について説明します。. ]]></description>
-    <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Git Credential Manager</title>
-    <link>https://docs.self-taught-code-tokushima.com/Tools/git-credential-manager</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Tools/git-credential-manager</guid>
-    <description><![CDATA[ Git Credential Manager Git for Windows を使った場合の資格情報の保存 git pull などリモートとの接続をすると初回接続時には以下のように CredentialHelperSelector が表示されます。 manager を選択すると GitHub への接続ウィンドウが開きます。 ここで Sign in with your browser ボタンをクリックします。 すると、ブラウザが開きます。 もしブラウザで GitHub にログインしていなければ以下のようにログイン画面が表示されます。 ログインが完了するか、すでにログイン済であればブラウザは真っ暗... ]]></description>
-    <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Tools</title>
-    <link>https://docs.self-taught-code-tokushima.com/Tools/</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Tools/</guid>
-    <description><![CDATA[ ツール ここでは、特定の開発環境とは関係のないツールについて説明します。. ]]></description>
-    <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>OpenAI Codex を Windows で利用</title>
-    <link>https://docs.self-taught-code-tokushima.com/Tools/openai-codex</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Tools/openai-codex</guid>
-    <description><![CDATA[ OpenAI の Codex の Windows 環境での基本的な使い方を見ていきます。 ]]></description>
     <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
   </item>
     </channel>
