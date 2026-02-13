@@ -12,6 +12,12 @@
     <description><![CDATA[ STC/T Resources Self-Taught CODE Tokushima のリソースサイトへようこそ。 カテゴリ Unity - Unity ゲーム開発に関するドキュメント UnrealEngine - Unreal Engine ゲーム開発に関するドキュメント Minecraft - Minecraft 関連のドキュメント Roblox - Roblox 開発に関するドキュメント Tools - 各種ツールの使い方 Research - 調査・研究 . ]]></description>
     <pubDate>Fri, 13 Feb 2026 02:21:59 GMT</pubDate>
   </item><item>
+    <title>Console Variables の設定</title>
+    <link>https://docs.self-taught-code-tokushima.com/UnrealEngine/console-variables</link>
+    <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/console-variables</guid>
+    <description><![CDATA[ Console Variable (CVar) Console Variable (CVar) は、Unreal Engine の設定値を開発コンソールから動的に変更・取得できる変数です。主にデバッグ、パフォーマンス調整、レンダリング設定（LumenやNaniteなど）の切り替えに利用されます。 厳密には以下の2種類に大別されますが、利用方法はほぼ同じであるため、便宜上まとめて「コンソールコマンド」と呼ばれることが多いです。 Console Variables (コンソール変数): r.Tonemapper.Sharpen 1 のように数値を設定して挙動を変えるもの。「r.」で始まるレンダリン... ]]></description>
+    <pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>⚡ Roblox Studio の更新情報</title>
     <link>https://docs.self-taught-code-tokushima.com/Roblox/Updates-Roblox-Studio</link>
     <guid>https://docs.self-taught-code-tokushima.com/Roblox/Updates-Roblox-Studio</guid>
@@ -59,12 +65,6 @@
     <guid>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course</guid>
     <description><![CDATA[ Create With VR Course Unity Learn の Create with VR コースの実施ログです。このコースは動画も豊富なので迷うことはあまりありません。 Create with VR 実施環境 Unity 6.3 Meta Quest 3 VR Software Setup VR Software Setup - Unity Learn 4. ]]></description>
     <pubDate>Fri, 23 Jan 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Roblox 2D ゲームクイックスタート</title>
-    <link>https://docs.self-taught-code-tokushima.com/Roblox/2d-quickstart</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Roblox/2d-quickstart</guid>
-    <description><![CDATA[ Roblox 2D ゲームクイックスタート カメラと動きの制限 今回は StarterPlayer/StarterCharacterScripts に CameraScript をローカルスクリプト (LocalScript) として追加します。 プレイヤーの動作を左右方向のみに制限する カメラをプレイヤーへの追随ではなくスクリプト制御 (Scriptable) にしプレイヤーの位置に手動で追随させる CameraScriptlocal Camera = game.Workspace.CurrentCamera local ContextActionService = game:GetServ... ]]></description>
-    <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
