@@ -6,6 +6,12 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>接触すると崩落する物体</title>
+    <link>https://docs.self-taught-code-tokushima.com/UnrealEngine/Destruction/object-collapses-on-contact</link>
+    <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/Destruction/object-collapses-on-contact</guid>
+    <description><![CDATA[ 接触すると崩落する物体を作るには 接触する これは分かりやすく Collision のコンポーネントを使うことで実現できます Box Collision, Sphere Collision などですね 崩落する 「バラバラにしておいたメッシュに物理を適用しておき、接触したときにそれに入れ替えて崩落するように見せる」のような方法も取れます 今回は Unreal Engine の Chaos Destruction を利用します 崩落するメッシュを作る 空のレベルを用意しておきます。 0. ]]></description>
+    <pubDate>Wed, 18 Feb 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>STC/T Resources</title>
     <link>https://docs.self-taught-code-tokushima.com/</link>
     <guid>https://docs.self-taught-code-tokushima.com/</guid>
@@ -59,12 +65,6 @@
     <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/reference-projects</guid>
     <description><![CDATA[ Unreal Engine で参照できるプロジェクト Unreal Engine で無料で参照できるプロジェクトを集めています。 特定のトピックを扱うようなプロジェクトには GAS のようなトピックタグを付けています。 dev.epicgames.com/documentation/en-us/unreal-engine/lyra-sample-game-in-unreal-engine Lyra Sample Game Lyra is a learning resource designed as a sample game project to help you understand th... ]]></description>
     <pubDate>Tue, 10 Feb 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>【Unity Learn】 Create With VR Course</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course</guid>
-    <description><![CDATA[ Create With VR Course Unity Learn の Create with VR コースの実施ログです。このコースは動画も豊富なので迷うことはあまりありません。 Create with VR 実施環境 Unity 6.3 Meta Quest 3 VR Software Setup VR Software Setup - Unity Learn 4. ]]></description>
-    <pubDate>Fri, 23 Jan 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
