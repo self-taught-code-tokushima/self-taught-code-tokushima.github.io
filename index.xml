@@ -6,6 +6,12 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Fab の期間限定無料コンテンツを取得する</title>
+    <link>https://docs.self-taught-code-tokushima.com/UnrealEngine/get-limited-time-fab-freebies</link>
+    <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/get-limited-time-fab-freebies</guid>
+    <description><![CDATA[ 期間限定コンテンツ 以前は毎月入れ替えでしたが、最近は隔週入れ替えになっています。 入れ替えタイミングの通知 Fab を日々チェックしてもいいですが、以下の X アカウントをフォローしておくと気づきやすいです。 x.com/fab x.com/GameMakersJP x.com/UnrealStudyInfo 取得手順 Epic Game Launcher の画面は変更が入る可能性があるため、あくまでこの時点の流れです。 Web の Fab サイトもほとんど変わりません。 1. ]]></description>
+    <pubDate>Thu, 26 Feb 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>First Person テンプレートを使った Chaos Destruction</title>
     <link>https://docs.self-taught-code-tokushima.com/UnrealEngine/Destruction/destruction-sample-with-first-person</link>
     <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/Destruction/destruction-sample-with-first-person</guid>
@@ -59,12 +65,6 @@
     <guid>https://docs.self-taught-code-tokushima.com/unity/Updates-Unity</guid>
     <description><![CDATA[  以下のページが最新のリリースノートになるが、必ず最新のバージョンページに自動で移動する unity.com/ja/releases/editor/whats-new 現時点では 6000.2.8f1 のページにリダイレクトされる Unity 6000.3.8f1 各バージョンの詳細な情報を見るには以下の unity3d.com の方のページを見る こちらもその時点の最新版が表示される Unity - Manual: Unity 6.3 User Manual 各バージョンの差分を確認するには以下のサイトが役に立ちます。unity3d.com にある公式のものです。 Unity Release... ]]></description>
     <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>PowerShell コマンド</title>
-    <link>https://docs.self-taught-code-tokushima.com/Tools/powershell-commands</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Tools/powershell-commands</guid>
-    <description><![CDATA[ シンボリックリンク New-Item -ItemType SymbolicLink -Path リンク先 -Value リンク元 New-Item (Microsoft.PowerShell.Management) - PowerShell | Microsoft Learn [PowerShell] シンボリックリンクを作るメモ PowerShell - Qiita 参考 fleschutz/PowerShell: 600+ free PowerShell scripts (.ps1) for Linux, macOS, and Windows. ]]></description>
-    <pubDate>Tue, 10 Feb 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
