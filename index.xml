@@ -6,6 +6,12 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Unreal Engine の Blueprint をテキストフォーマットで扱う</title>
+    <link>https://docs.self-taught-code-tokushima.com/UnrealEngine/share-blueprints-in-text</link>
+    <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/share-blueprints-in-text</guid>
+    <description><![CDATA[ Unreal Engine のテキストフォーマット Unreal Engine ではコピーしたものをテキストエディタに貼り付けるとテキストデータが得られます。 以下は一例ですが、多くのものがテキストとして取得できます。 レベルにあるアクタ Begin Map Begin Level Begin Actor Class=/Script/Engine.StaticMeshActor Name=Floor_UAID_F4A475FF15A3736A02_1961940706 Archetype=&quot;/Script/Engine.StaticMeshActor&#039;/Script/Eng... ]]></description>
+    <pubDate>Fri, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>Fab の期間限定無料コンテンツを取得する</title>
     <link>https://docs.self-taught-code-tokushima.com/UnrealEngine/get-limited-time-fab-freebies</link>
     <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/get-limited-time-fab-freebies</guid>
@@ -58,12 +64,6 @@
     <link>https://docs.self-taught-code-tokushima.com/minecraft/Updates-Minecraft-Bedrock</link>
     <guid>https://docs.self-taught-code-tokushima.com/minecraft/Updates-Minecraft-Bedrock</guid>
     <description><![CDATA[  Release Changelogs – Minecraft Feedback Minecraft Bedrock Stable APIs 1.26.0 Update Notes | Microsoft Learn 1.21.130 Update Notes | Microsoft Learn 2026 年からのバージョン体系の変化 Minecraft の新しいバージョン番号システム | Minecraft 2026 年から急に 1.26.x になっている理由です . ]]></description>
-    <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>⚡ Unity の更新情報</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/Updates-Unity</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/Updates-Unity</guid>
-    <description><![CDATA[  以下のページが最新のリリースノートになるが、必ず最新のバージョンページに自動で移動する unity.com/ja/releases/editor/whats-new 現時点では 6000.2.8f1 のページにリダイレクトされる Unity 6000.3.8f1 各バージョンの詳細な情報を見るには以下の unity3d.com の方のページを見る こちらもその時点の最新版が表示される Unity - Manual: Unity 6.3 User Manual 各バージョンの差分を確認するには以下のサイトが役に立ちます。unity3d.com にある公式のものです。 Unity Release... ]]></description>
     <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
