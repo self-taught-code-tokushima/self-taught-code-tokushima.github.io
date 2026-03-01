@@ -6,6 +6,12 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Chaos Destruction のリンク集</title>
+    <link>https://docs.self-taught-code-tokushima.com/UnrealEngine/Destruction/useful-links-for-chaos-destruction</link>
+    <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/Destruction/useful-links-for-chaos-destruction</guid>
+    <description><![CDATA[ Chaos Destruction | 崩壊・破壊 | UE5攻略リンク Field Unreal Engine における Chaos フィールドのユーザー ガイド | Unreal Engine 5.7 ドキュメンテーション | Epic Developer Community Unreal Engine 5 - Chaos Destruction 入門【CEDEC 2022】 | ドクセル 61ページ以降 かなり詳細な使い方が解説されている Geometry Collection | hzFishy’s Game Dev Notes C++ コードも参照しつつ深堀りされている Master... ]]></description>
+    <pubDate>Sun, 01 Mar 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>Unreal Engine の Blueprint をテキストフォーマットで扱う</title>
     <link>https://docs.self-taught-code-tokushima.com/UnrealEngine/share-blueprints-in-text</link>
     <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/share-blueprints-in-text</guid>
@@ -58,12 +64,6 @@
     <link>https://docs.self-taught-code-tokushima.com/UnrealEngine/Updates-Unreal-Engine</link>
     <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/Updates-Unreal-Engine</guid>
     <description><![CDATA[  Unreal Engine 更新履歴 | UE5攻略リンク 公式サイトではありませんが、日本語の情報でもっともまとまっています 公式サイトは更新情報だけの一覧がありませんが、一つ開くとドロップダウンでバージョンを選択できます Unreal Engine 5.7 リリース ノート | Unreal Engine 5.7 ドキュメンテーション | Epic Developer Community Unreal Engine 5.6 リリース ノート | Unreal Engine 5.6 ドキュメンテーション | Epic Developer Community . ]]></description>
-    <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>⚡ Minecraft Bedrock の更新情報</title>
-    <link>https://docs.self-taught-code-tokushima.com/minecraft/Updates-Minecraft-Bedrock</link>
-    <guid>https://docs.self-taught-code-tokushima.com/minecraft/Updates-Minecraft-Bedrock</guid>
-    <description><![CDATA[  Release Changelogs – Minecraft Feedback Minecraft Bedrock Stable APIs 1.26.0 Update Notes | Microsoft Learn 1.21.130 Update Notes | Microsoft Learn 2026 年からのバージョン体系の変化 Minecraft の新しいバージョン番号システム | Minecraft 2026 年から急に 1.26.x になっている理由です . ]]></description>
     <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
