@@ -6,6 +6,12 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Meta Quest 3 でのスクリーンショットの撮影方法</title>
+    <link>https://docs.self-taught-code-tokushima.com/unity/VR/screenshot-in-quest3</link>
+    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/screenshot-in-quest3</guid>
+    <description><![CDATA[  Meta Quest Linkでスクリーンショットを撮影する - MRが楽しい MetaQuest3で画面キャプチャまたは録画を行う - MRが楽しい 上記の記事が詳しいです。 Quest3 上でのスクショ コントローラーの Metaボタン + 人差し指トリガー の同時押し 「写真を保存しました」のようなダイアログが出る カメラアプリでも可能 Link アプリ上のスクショ コントローラーのみでの撮影ができない ホームのコントロールパネルの時計をクリックした時にでるパネルにスクショボタンがある Meta Quest Linkでスクリーンショットを撮影する - MRが楽しい に詳細があります . ]]></description>
+    <pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>Windows 環境を使いやすくする</title>
     <link>https://docs.self-taught-code-tokushima.com/Tools/easy-to-use-windows-environment</link>
     <guid>https://docs.self-taught-code-tokushima.com/Tools/easy-to-use-windows-environment</guid>
@@ -58,12 +64,6 @@
     <link>https://docs.self-taught-code-tokushima.com/Roblox/Updates-Roblox-Studio</link>
     <guid>https://docs.self-taught-code-tokushima.com/Roblox/Updates-Roblox-Studio</guid>
     <description><![CDATA[  最新 Updates トピック - Developer Forum | Roblox . ]]></description>
-    <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>⚡ UEFN の更新情報</title>
-    <link>https://docs.self-taught-code-tokushima.com/UEFN/Updates-UEFN</link>
-    <guid>https://docs.self-taught-code-tokushima.com/UEFN/Updates-UEFN</guid>
-    <description><![CDATA[  Unreal Editor for Fortnite の最新情報 | Fortnite ドキュメンテーション | Epic Developer Community . ]]></description>
     <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
