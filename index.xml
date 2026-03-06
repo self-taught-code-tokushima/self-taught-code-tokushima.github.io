@@ -18,6 +18,12 @@
     <description><![CDATA[  Meta Quest Linkでスクリーンショットを撮影する - MRが楽しい MetaQuest3で画面キャプチャまたは録画を行う - MRが楽しい 上記の記事が詳しいです。 Quest3 上でのスクショ コントローラーの Metaボタン + 人差し指トリガー の同時押し 「写真を保存しました」のようなダイアログが出る カメラアプリでも可能 Link アプリ上のスクショ コントローラーのみでの撮影ができない ホームのコントロールパネルの時計をクリックした時にでるパネルにスクショボタンがある Meta Quest Linkでスクリーンショットを撮影する - MRが楽しい に詳細があります . ]]></description>
     <pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate>
   </item><item>
+    <title>Unity のフォルダ構成例</title>
+    <link>https://docs.self-taught-code-tokushima.com/unity/folder-structure-in-unity</link>
+    <guid>https://docs.self-taught-code-tokushima.com/unity/folder-structure-in-unity</guid>
+    <description><![CDATA[ Unity のフォルダ構成例を説明します。最初のうちは Assets フォルダの下に全部のファイルを置いてしまうかもしれませんが、少しずつ整理していきましょう。 最初に注意 注意点として、Unity に限らずフォルダ構成や命名（ファイルやフォルダの名前付け）というのは「どのように整理するか？」を表したものなので正解はありません。 多くの開発者や会社で様々なフォルダ構成が使われており、それは「個人のやりやすさ」、または「組織構造（どういうチームがどのように分業しているか）」に関わります。 学生の間は一人で作ることも多いと思いますので、基本は基本として守りつつ、自分のやりやすいようにカスタマイズし... ]]></description>
+    <pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>Windows 環境を使いやすくする</title>
     <link>https://docs.self-taught-code-tokushima.com/Tools/easy-to-use-windows-environment</link>
     <guid>https://docs.self-taught-code-tokushima.com/Tools/easy-to-use-windows-environment</guid>
@@ -59,12 +65,6 @@
     <guid>https://docs.self-taught-code-tokushima.com/</guid>
     <description><![CDATA[ STC/T Resources Self-Taught CODE Tokushima のリソースサイトへようこそ。 カテゴリ Unity - Unity ゲーム開発に関するドキュメント UnrealEngine - Unreal Engine ゲーム開発に関するドキュメント Minecraft - Minecraft 関連のドキュメント Roblox - Roblox 開発に関するドキュメント Tools - 各種ツールの使い方 Research - 調査・研究 . ]]></description>
     <pubDate>Fri, 13 Feb 2026 02:21:59 GMT</pubDate>
-  </item><item>
-    <title>Console Variables の設定</title>
-    <link>https://docs.self-taught-code-tokushima.com/UnrealEngine/console-variables</link>
-    <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/console-variables</guid>
-    <description><![CDATA[ Console Variable (CVar) Console Variable (CVar) は、Unreal Engine の設定値を開発コンソールから動的に変更・取得できる変数です。主にデバッグ、パフォーマンス調整、レンダリング設定（LumenやNaniteなど）の切り替えに利用されます。 厳密には以下の2種類に大別されますが、利用方法はほぼ同じであるため、便宜上まとめて「コンソールコマンド」と呼ばれることが多いです。 Console Variables (コンソール変数): r.Tonemapper.Sharpen 1 のように数値を設定して挙動を変えるもの。「r.」で始まるレンダリン... ]]></description>
-    <pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
