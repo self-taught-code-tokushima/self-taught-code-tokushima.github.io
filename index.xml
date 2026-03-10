@@ -6,11 +6,17 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>1.4 - Sockets | Create with VR | Unity Learn</title>
+    <link>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/1-4_sockets</link>
+    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/1-4_sockets</guid>
+    <description><![CDATA[ 1. ]]></description>
+    <pubDate>Tue, 10 Mar 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>開発中に Quest 3 で Meta Quest Link を使ってテストプレイする</title>
     <link>https://docs.self-taught-code-tokushima.com/unity/VR/play-in-quest-with-link-in-development</link>
     <guid>https://docs.self-taught-code-tokushima.com/unity/VR/play-in-quest-with-link-in-development</guid>
     <description><![CDATA[ VR での開発中に、シミュレータではなく実機で動作確認をしたい場合に Unity Editor から Play ボタンを押すだけで実機でのデバッグを可能にしてくれます。 これは Meta Quest での方法ですので、他の VR ヘッドセットでは同じようにできません Meta の解説ページ アプリ開発でLinkを使う | Meta Horizon OS Developers このページに沿って行えば問題ありません。 簡単に Meta 開発者アカウントが必要です おそらく皆さん作っていると思います Meta Horizon Link を PC にインストールする Quest Link と呼ばれて... ]]></description>
-    <pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate>
+    <pubDate>Tue, 10 Mar 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>Meta Quest 3 でのスクリーンショットの撮影方法</title>
     <link>https://docs.self-taught-code-tokushima.com/unity/VR/screenshot-in-quest3</link>
@@ -59,12 +65,6 @@
     <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/Destruction/object-collapses-on-contact</guid>
     <description><![CDATA[ 接触すると崩落する物体を作るには 接触する これは分かりやすく Collision のコンポーネントを使うことで実現できます Box Collision, Sphere Collision などですね 崩落する 「バラバラにしておいたメッシュに物理を適用しておき、接触したときにそれに入れ替えて崩落するように見せる」のような方法も取れます 今回は Unreal Engine の Chaos Destruction を利用します 崩落するメッシュを作る 空のレベルを用意しておきます。 0. ]]></description>
     <pubDate>Wed, 18 Feb 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>STC/T Resources</title>
-    <link>https://docs.self-taught-code-tokushima.com/</link>
-    <guid>https://docs.self-taught-code-tokushima.com/</guid>
-    <description><![CDATA[ STC/T Resources Self-Taught CODE Tokushima のリソースサイトへようこそ。 カテゴリ Unity - Unity ゲーム開発に関するドキュメント UnrealEngine - Unreal Engine ゲーム開発に関するドキュメント Minecraft - Minecraft 関連のドキュメント Roblox - Roblox 開発に関するドキュメント Tools - 各種ツールの使い方 Research - 調査・研究 . ]]></description>
-    <pubDate>Fri, 13 Feb 2026 02:21:59 GMT</pubDate>
   </item>
     </channel>
   </rss>
