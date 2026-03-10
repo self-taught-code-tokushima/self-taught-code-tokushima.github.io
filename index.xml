@@ -6,7 +6,13 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>1.4 - Sockets | Create with VR | Unity Learn</title>
+    <title>1.3 - Grabbable GameObject</title>
+    <link>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/1-3_grabbable-gameobject</link>
+    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/1-3_grabbable-gameobject</guid>
+    <description><![CDATA[ 1 Choose hand models 上記から好みの左右の Hand を選び以下のように Sphere の代わりに設定する 2. ]]></description>
+    <pubDate>Tue, 10 Mar 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>1.4 - Sockets</title>
     <link>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/1-4_sockets</link>
     <guid>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/1-4_sockets</guid>
     <description><![CDATA[ 1. ]]></description>
@@ -59,12 +65,6 @@
     <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/Destruction/destruction-sample-with-first-person</guid>
     <description><![CDATA[ バージョン UE 5.6 以上 射撃で破壊を試してみよう Chaos Destruction を試すサンプルとして、First Person ビューで射撃をして破壊できるようにします。 今回はできるだけ簡単に射撃での破壊を実現するために既存のテンプレート及びバリアントを使います。 UE 5.6 より前は？ UE 5.6 からテンプレートが変更になったため、それより前のバージョンでは方法が異なります。 Unreal Engine 5.6 向けゲーム テンプレートがアップデート。今すぐ利用可能 - Unreal Engine 手順 First Person (一人称) テンプレートにバリアントを追... ]]></description>
     <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>接触すると崩落する物体</title>
-    <link>https://docs.self-taught-code-tokushima.com/UnrealEngine/Destruction/object-collapses-on-contact</link>
-    <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/Destruction/object-collapses-on-contact</guid>
-    <description><![CDATA[ 接触すると崩落する物体を作るには 接触する これは分かりやすく Collision のコンポーネントを使うことで実現できます Box Collision, Sphere Collision などですね 崩落する 「バラバラにしておいたメッシュに物理を適用しておき、接触したときにそれに入れ替えて崩落するように見せる」のような方法も取れます 今回は Unreal Engine の Chaos Destruction を利用します 崩落するメッシュを作る 空のレベルを用意しておきます。 0. ]]></description>
-    <pubDate>Wed, 18 Feb 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
