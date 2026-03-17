@@ -6,6 +6,12 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>2.2 - Activation events</title>
+    <link>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/2-2_activation_events</link>
+    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/2-2_activation_events</guid>
+    <description><![CDATA[ 1. ]]></description>
+    <pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>1.3 - Grabbable GameObject</title>
     <link>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/1-3_grabbable-gameobject</link>
     <guid>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/1-3_grabbable-gameobject</guid>
@@ -59,12 +65,6 @@
     <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/share-blueprints-in-text</guid>
     <description><![CDATA[ Unreal Engine のテキストフォーマット Unreal Engine ではコピーしたものをテキストエディタに貼り付けるとテキストデータが得られます。 以下は一例ですが、多くのものがテキストとして取得できます。 レベルにあるアクタ Begin Map Begin Level Begin Actor Class=/Script/Engine.StaticMeshActor Name=Floor_UAID_F4A475FF15A3736A02_1961940706 Archetype=&quot;/Script/Engine.StaticMeshActor&#039;/Script/Eng... ]]></description>
     <pubDate>Fri, 27 Feb 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Fab の期間限定無料コンテンツを取得する</title>
-    <link>https://docs.self-taught-code-tokushima.com/UnrealEngine/get-limited-time-fab-freebies</link>
-    <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/get-limited-time-fab-freebies</guid>
-    <description><![CDATA[ 期間限定コンテンツ 以前は毎月入れ替えでしたが、最近は隔週入れ替えになっています。 入れ替えタイミングの通知 Fab を日々チェックしてもいいですが、以下の X アカウントをフォローしておくと気づきやすいです。 x.com/fab x.com/GameMakersJP x.com/UnrealStudyInfo 取得手順 Epic Game Launcher の画面は変更が入る可能性があるため、あくまでこの時点の流れです。 Web の Fab サイトもほとんど変わりません。 1. ]]></description>
-    <pubDate>Thu, 26 Feb 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
