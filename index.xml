@@ -6,9 +6,21 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Quest 3 での Meta XR の始め方</title>
+    <link>https://docs.self-taught-code-tokushima.com/unity/VR/meta-xr-on-quest3-first-step</link>
+    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/meta-xr-on-quest3-first-step</guid>
+    <description><![CDATA[ Meta Horizon の Unity スタートガイド 以下から始まるスタートガイドをベースに進めていきます。 Meta Quest VRヘッドセット向けのUnityアプリを開発する | Meta Horizon OS Developers Unity の設定 VR開発用にUnityを設定する | Meta Horizon OS Developers Androidビルドサポートモジュールを追加する 今回は Unity 6000.3.6f1 を使用します。 Unityプロジェクトを作成する 手順通り Universal 3D のテンプレートで作成します。 ビルドプラットフォームを設定する M... ]]></description>
+    <pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>2.2 - Activation events</title>
     <link>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/2-2_activation_events</link>
     <guid>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/2-2_activation_events</guid>
+    <description><![CDATA[ 1. ]]></description>
+    <pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>2.3 - Near-Far and Ray Interactors</title>
+    <link>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/2-3_near-far_and_ray_interactors</link>
+    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/2-3_near-far_and_ray_interactors</guid>
     <description><![CDATA[ 1. ]]></description>
     <pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate>
   </item><item>
@@ -30,6 +42,12 @@
     <description><![CDATA[ 1. ]]></description>
     <pubDate>Tue, 10 Mar 2026 00:00:00 GMT</pubDate>
   </item><item>
+    <title>Unity VR 関連</title>
+    <link>https://docs.self-taught-code-tokushima.com/unity/VR/links-for-unity-vr</link>
+    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/links-for-unity-vr</guid>
+    <description><![CDATA[ XR Interaction Toolkit Changelog | XR Interaction Toolkit | 3.4.0 更新情報を確認できる 「この API はまだ使えるかな？」と思ったら見てみよう . ]]></description>
+    <pubDate>Tue, 10 Mar 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>開発中に Quest 3 で Meta Quest Link を使ってテストプレイする</title>
     <link>https://docs.self-taught-code-tokushima.com/unity/VR/play-in-quest-with-link-in-development</link>
     <guid>https://docs.self-taught-code-tokushima.com/unity/VR/play-in-quest-with-link-in-development</guid>
@@ -47,24 +65,6 @@
     <guid>https://docs.self-taught-code-tokushima.com/unity/folder-structure-in-unity</guid>
     <description><![CDATA[ Unity のフォルダ構成例を説明します。最初のうちは Assets フォルダの下に全部のファイルを置いてしまうかもしれませんが、少しずつ整理していきましょう。 最初に注意 注意点として、Unity に限らずフォルダ構成や命名（ファイルやフォルダの名前付け）というのは「どのように整理するか？」を表したものなので正解はありません。 多くの開発者や会社で様々なフォルダ構成が使われており、それは「個人のやりやすさ」、または「組織構造（どういうチームがどのように分業しているか）」に関わります。 学生の間は一人で作ることも多いと思いますので、基本は基本として守りつつ、自分のやりやすいようにカスタマイズし... ]]></description>
     <pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Windows 環境を使いやすくする</title>
-    <link>https://docs.self-taught-code-tokushima.com/Tools/easy-to-use-windows-environment</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Tools/easy-to-use-windows-environment</guid>
-    <description><![CDATA[ ✂️不要な初期インストールアプリを削除する Raphire/Win11Debloat: A simple, lightweight PowerShell script to remove pre-installed apps, disable telemetry, as well as perform various other changes to customize, declutter and improve your Windows experience. ]]></description>
-    <pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Chaos Destruction のリンク集</title>
-    <link>https://docs.self-taught-code-tokushima.com/UnrealEngine/Destruction/useful-links-for-chaos-destruction</link>
-    <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/Destruction/useful-links-for-chaos-destruction</guid>
-    <description><![CDATA[ Chaos Destruction | 崩壊・破壊 | UE5攻略リンク Field Unreal Engine における Chaos フィールドのユーザー ガイド | Unreal Engine 5.7 ドキュメンテーション | Epic Developer Community Unreal Engine 5 - Chaos Destruction 入門【CEDEC 2022】 | ドクセル 61ページ以降 かなり詳細な使い方が解説されている Geometry Collection | hzFishy’s Game Dev Notes C++ コードも参照しつつ深堀りされている Master... ]]></description>
-    <pubDate>Sun, 01 Mar 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Unreal Engine の Blueprint をテキストフォーマットで扱う</title>
-    <link>https://docs.self-taught-code-tokushima.com/UnrealEngine/share-blueprints-in-text</link>
-    <guid>https://docs.self-taught-code-tokushima.com/UnrealEngine/share-blueprints-in-text</guid>
-    <description><![CDATA[ Unreal Engine のテキストフォーマット Unreal Engine ではコピーしたものをテキストエディタに貼り付けるとテキストデータが得られます。 以下は一例ですが、多くのものがテキストとして取得できます。 レベルにあるアクタ Begin Map Begin Level Begin Actor Class=/Script/Engine.StaticMeshActor Name=Floor_UAID_F4A475FF15A3736A02_1961940706 Archetype=&quot;/Script/Engine.StaticMeshActor&#039;/Script/Eng... ]]></description>
-    <pubDate>Fri, 27 Feb 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
