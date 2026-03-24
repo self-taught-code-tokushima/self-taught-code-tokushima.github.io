@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr"><head><title>Quest 3 での Meta XR の始め方</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans JP:wght@400;700&amp;family=IBM Plex Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Self-Taught CODE Tokushima Resources"/><meta property="og:title" content="Quest 3 での Meta XR の始め方"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Quest 3 での Meta XR の始め方"/><meta name="twitter:description" content="Meta Horizon の Unity スタートガイド 以下から始まるスタートガイドをベースに進めていきます。 Meta Quest VRヘッドセット向けのUnityアプリを開発する | Meta Horizon OS Developers Unity の設定 VR開発用にUnityを設定する | Meta Horizon OS Developers Androidビルドサポートモジュールを追加する 今回は Unity 6000.3.6f1 を使用します。 Unityプロジェクトを作成する 手順通り Universal 3D のテンプレートで作成します。 ビルドプラットフォームを設定する M..."/><meta property="og:description" content="Meta Horizon の Unity スタートガイド 以下から始まるスタートガイドをベースに進めていきます。 Meta Quest VRヘッドセット向けのUnityアプリを開発する | Meta Horizon OS Developers Unity の設定 VR開発用にUnityを設定する | Meta Horizon OS Developers Androidビルドサポートモジュールを追加する 今回は Unity 6000.3.6f1 を使用します。 Unityプロジェクトを作成する 手順通り Universal 3D のテンプレートで作成します。 ビルドプラットフォームを設定する M..."/><meta property="og:image:alt" content="Meta Horizon の Unity スタートガイド 以下から始まるスタートガイドをベースに進めていきます。 Meta Quest VRヘッドセット向けのUnityアプリを開発する | Meta Horizon OS Developers Unity の設定 VR開発用にUnityを設定する | Meta Horizon OS Developers Androidビルドサポートモジュールを追加する 今回は Unity 6000.3.6f1 を使用します。 Unityプロジェクトを作成する 手順通り Universal 3D のテンプレートで作成します。 ビルドプラットフォームを設定する M..."/><meta property="twitter:domain" content="docs.self-taught-code-tokushima.com"/><meta property="og:url" content="https://docs.self-taught-code-tokushima.com/unity/VR/meta-xr-on-quest3-first-step"/><meta property="twitter:url" content="https://docs.self-taught-code-tokushima.com/unity/VR/meta-xr-on-quest3-first-step"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="Meta Horizon の Unity スタートガイド 以下から始まるスタートガイドをベースに進めていきます。 Meta Quest VRヘッドセット向けのUnityアプリを開発する | Meta Horizon OS Developers Unity の設定 VR開発用にUnityを設定する | Meta Horizon OS Developers Androidビルドサポートモジュールを追加する 今回は Unity 6000.3.6f1 を使用します。 Unityプロジェクトを作成する 手順通り Universal 3D のテンプレートで作成します。 ビルドプラットフォームを設定する M..."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+<html lang="ja" dir="ltr"><head><title>Quest 3 での Meta XR の始め方</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans JP:wght@400;700&amp;family=IBM Plex Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Self-Taught CODE Tokushima Resources"/><meta property="og:title" content="Quest 3 での Meta XR の始め方"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Quest 3 での Meta XR の始め方"/><meta name="twitter:description" content="Meta Horizon の Unity スタートガイド 以下から始まるスタートガイドをベースに進めていきます。 Meta Quest VRヘッドセット向けのUnityアプリを開発する | Meta Horizon OS Developers またさらに詳細な情報として以下のスライドが非常に有用です Unity6とMETA XR SDK(v69-83)でQuestアプリ開発 | ドクセル Unity の設定 VR開発用にUnityを設定する | Meta Horizon OS Developers Androidビルドサポートモジュールを追加する 今回は Unity 6000.3.6f1 を使..."/><meta property="og:description" content="Meta Horizon の Unity スタートガイド 以下から始まるスタートガイドをベースに進めていきます。 Meta Quest VRヘッドセット向けのUnityアプリを開発する | Meta Horizon OS Developers またさらに詳細な情報として以下のスライドが非常に有用です Unity6とMETA XR SDK(v69-83)でQuestアプリ開発 | ドクセル Unity の設定 VR開発用にUnityを設定する | Meta Horizon OS Developers Androidビルドサポートモジュールを追加する 今回は Unity 6000.3.6f1 を使..."/><meta property="og:image:alt" content="Meta Horizon の Unity スタートガイド 以下から始まるスタートガイドをベースに進めていきます。 Meta Quest VRヘッドセット向けのUnityアプリを開発する | Meta Horizon OS Developers またさらに詳細な情報として以下のスライドが非常に有用です Unity6とMETA XR SDK(v69-83)でQuestアプリ開発 | ドクセル Unity の設定 VR開発用にUnityを設定する | Meta Horizon OS Developers Androidビルドサポートモジュールを追加する 今回は Unity 6000.3.6f1 を使..."/><meta property="twitter:domain" content="docs.self-taught-code-tokushima.com"/><meta property="og:url" content="https://docs.self-taught-code-tokushima.com/unity/VR/meta-xr-on-quest3-first-step"/><meta property="twitter:url" content="https://docs.self-taught-code-tokushima.com/unity/VR/meta-xr-on-quest3-first-step"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="Meta Horizon の Unity スタートガイド 以下から始まるスタートガイドをベースに進めていきます。 Meta Quest VRヘッドセット向けのUnityアプリを開発する | Meta Horizon OS Developers またさらに詳細な情報として以下のスライドが非常に有用です Unity6とMETA XR SDK(v69-83)でQuestアプリ開発 | ドクセル Unity の設定 VR開発用にUnityを設定する | Meta Horizon OS Developers Androidビルドサポートモジュールを追加する 今回は Unity 6000.3.6f1 を使..."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
   position: absolute;
   display: flex;
   float: right;
@@ -119,6 +119,11 @@ pre:hover > .expand-button {
 <p>以下から始まるスタートガイドをベースに進めていきます。</p>
 <ul>
 <li><a href="https://developers.meta.com/horizon/documentation/unity/unity-development-overview/" class="external">Meta Quest VRヘッドセット向けのUnityアプリを開発する | Meta Horizon OS Developers<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>またさらに詳細な情報として以下のスライドが非常に有用です
+<ul>
+<li><a href="https://www.docswell.com/s/Ovjang/KYDEPE-Unity6-MetaXRSDK" class="external">Unity6とMETA XR SDK(v69-83)でQuestアプリ開発 | ドクセル<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+</li>
 </ul>
 <h2 id="unity-の設定">Unity の設定<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#unity-の設定" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <p><a href="https://developers.meta.com/horizon/documentation/unity/unity-project-setup/" class="external">VR開発用にUnityを設定する | Meta Horizon OS Developers<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
@@ -261,9 +266,17 @@ pre:hover > .expand-button {
 更新日時は古いのですが、以下の資料は現在の <strong>Meta Horizon Link</strong> の名前に変っています。</p>
 <p><a href="https://developers.meta.com/horizon/documentation/unity/unity-link/" class="external">アプリ開発でLinkを使う | Meta Horizon OS Developers<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
 <p>この辺りは Open XR か Meta XR かには関わらないため <a href="../../unity/VR/play-in-quest-with-link-in-development" class="internal" data-slug="unity/VR/play-in-quest-with-link-in-development">play-in-quest-with-link-in-development</a> の方を見てもらってもいいかもしれません。</p>
-<p>⚠️ おそらく、この時点 (Meta XR シミュレーター起動前) では実機転送できると思います。
-ただ、Meta XR シミュレーターを一度有効化すると、Unity Editor からの無効化 (Deactivated) がうまく機能せず転送できなくなります。
-後述の通り、Meta XR シミュレーターをシミュレーターの方から Deactivated することで再び実機転送できるようになります。</p>
+<blockquote class="callout warning" data-callout="warning">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Meta XR Simulator を OpenXR ランタイムにすると </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>おそらく、この時点 (Meta XR シミュレーター起動前) では実機転送できると思います。
+注意して欲しいのは、Meta XR シミュレーターのトグルを有効化し、OpenXR ランタイムにすると、Meta Horizon Link が OpenXR ランタイムとして認識されません。</p>
+</div>
+</blockquote>
 <hr/>
 <h2 id="meta-xrシミュレーターのスタートガイド">Meta XRシミュレーターのスタートガイド<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#meta-xrシミュレーターのスタートガイド" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <p><a href="https://developers.meta.com/horizon/documentation/unity/xrsim-getting-started/" class="external">Meta XRシミュレーターのスタートガイド | Meta Horizon OS Developers<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
@@ -300,19 +313,15 @@ pre:hover > .expand-button {
 </li>
 <li><code>Meta XR Simulator</code> が起動すると以下のような別アプリが立ち上がります。
 <ul>
-<li>左上のトグルが以下の画像のように「無効状態 (非アクティブ)」になっている場合は、有効 (アクティブ) にします。
+<li>左上のトグルが以下の画像のように「無効状態 (非アクティブ)」になっていますが、Unity 開発の場合は、Unity Editor から activate / deactivate を切り替えるため、このままで OK です。
 <ul>
 <li><img src="../../assets/meta-xr-on-quest3-first-step/file-20260323230354943.png" width="auto" height="auto" alt/></li>
 </ul>
 </li>
-<li>すると、以下のダイアログが表示され、 `OpenXR Runtime にするか問われますので、「I’m ready」で進みます。
+<li>トグルをクリックすると以下のダイアログが表示され、 <code>OpenXR Runtime</code> にするか問われます。ここで進んでしまうと、Meta Horizon Link が <code>OpenXR Runtime</code> ではなくなり、実機での実行ができなくなります。
 <ul>
 <li><img src="../../assets/meta-xr-on-quest3-first-step/file-20260323230408613.png" width="auto" height="auto" alt/></li>
-</ul>
-</li>
-<li><span class="text-highlight">ここはよく分かっていませんが、先程の Unity Editor の activated / deactivated と、Meta XR Simulator のトグルは同期しません</span>
-<ul>
-<li>ただ、<code>Meta XR Simulator</code> のトグルが有効にならない限りシミュレーターの動作はしません。</li>
+<li><span class="text-highlight">つまり、このトグルは非アクティブのままにしておいてください</span></li>
 </ul>
 </li>
 </ul>
@@ -324,20 +333,22 @@ pre:hover > .expand-button {
 <p>物理ヘッドセット上での開発に戻るには、<strong>Meta</strong> > <strong>Meta XR Simulator (Meta XRシミュレーター)</strong> > <strong>Deactivate (非アクティブ化)</strong> を選択して、Unityのシミュレーターを非アクティブにします。
 Unity内からシミュレーターを停止することをおすすめします。このアプローチでは、今後の反復作業のためにシミュレーターウィンドウを保持して再初期化する必要を排除するため、より迅速に作業を開始できます。</p>
 </blockquote>
-<p>現状このプロセスは上手く動作しません。 Unity Editor 側の設定を変えただけだと、変わらず Meta XR Simulator の方に転送されてしまいます。</p>
-<ol>
-<li><code>Meta XR Simulator</code> のトグルを使って Deactivate することで、実機に転送することができます。
-<ul>
-<li>ただ、これは管理者権限のチェックが毎回発生するのでちょっと微妙です。</li>
-<li><img src="../../assets/meta-xr-on-quest3-first-step/file-20260323231830601.png" width="auto" height="auto" alt/></li>
-</ul>
-</li>
-<li><code>Meta XR Simulator</code> を落としても、実機に転送はできない
-<ul>
-<li>トグルが activated な状態では、アプリを落とした状態でかつ、当然 Unity Editor の設定では XR Simulator を Deacitvate していても Meta XR Simulator が起動してきてしまい実機には転送されません。</li>
-</ul>
-</li>
-</ol>
+<p>上記でも述べましたが、<code>Meta XR Simulator</code> 自体のトグルを有効化 (アクティブ化) してしまうと、OpenXR Runtime 自体が変ってしまいます。</p>
+<p><span class="text-highlight">あくまで、Unity Editor での Meta XR Simulator の設定での切り替えということを間違えないでください</span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Meta メニューから</th><th>Meta XR Tools から</th></tr></thead><tbody><tr><td><img src="../../assets/meta-xr-on-quest3-first-step/file-20260324135001339.png" width="auto" height="auto" alt/></td><td><img src="../../assets/meta-xr-on-quest3-first-step/file-20260324135013510.png" width="auto" height="auto" alt/></td></tr></tbody></table></div>
 <hr/>
 <h2 id="サンプルシーンを試す">サンプルシーンを試す<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#サンプルシーンを試す" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <p>ここからはドキュメントにあるものではありません。</p>

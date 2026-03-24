@@ -9,7 +9,7 @@
     <title>Quest 3 での Meta XR の始め方</title>
     <link>https://docs.self-taught-code-tokushima.com/unity/VR/meta-xr-on-quest3-first-step</link>
     <guid>https://docs.self-taught-code-tokushima.com/unity/VR/meta-xr-on-quest3-first-step</guid>
-    <description><![CDATA[ Meta Horizon の Unity スタートガイド 以下から始まるスタートガイドをベースに進めていきます。 Meta Quest VRヘッドセット向けのUnityアプリを開発する | Meta Horizon OS Developers Unity の設定 VR開発用にUnityを設定する | Meta Horizon OS Developers Androidビルドサポートモジュールを追加する 今回は Unity 6000.3.6f1 を使用します。 Unityプロジェクトを作成する 手順通り Universal 3D のテンプレートで作成します。 ビルドプラットフォームを設定する M... ]]></description>
+    <description><![CDATA[ Meta Horizon の Unity スタートガイド 以下から始まるスタートガイドをベースに進めていきます。 Meta Quest VRヘッドセット向けのUnityアプリを開発する | Meta Horizon OS Developers またさらに詳細な情報として以下のスライドが非常に有用です Unity6とMETA XR SDK(v69-83)でQuestアプリ開発 | ドクセル Unity の設定 VR開発用にUnityを設定する | Meta Horizon OS Developers Androidビルドサポートモジュールを追加する 今回は Unity 6000.3.6f1 を使... ]]></description>
     <pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>2.2 - Activation events</title>
