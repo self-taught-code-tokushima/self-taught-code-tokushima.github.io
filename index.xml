@@ -6,6 +6,12 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Unity+VRゲーム開発ガイド Chapter9 の補完</title>
+    <link>https://docs.self-taught-code-tokushima.com/unity/VR/vrlearning-book-chapter9</link>
+    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/vrlearning-book-chapter9</guid>
+    <description><![CDATA[ 「VRならでは」の体験を作る Unity+VRゲーム開発ガイド | 技術評論社 上記書籍 (初版) の 9 章は Unity の XR Interaction Toolkit の初学者では補完しきれない省略等があるため、ここでは多少構成を変えつつ説明します。 なお、書籍を所持している前提で記載するため、ここだけを読んでも同じことはできないと考えてください。 ただし、Chapter9/10 の内容を実行して体験するだけであれば、サンプルコードの Assets/App/Gun/GunTarget.unity のシーンがそのまま使えます。とても素晴らしいサンプルです。 環境 Unity 6000.3... ]]></description>
+    <pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>Unity VR 開発時のトラブルシュート</title>
     <link>https://docs.self-taught-code-tokushima.com/unity/VR/trableshoot-in-development-unity-vr</link>
     <guid>https://docs.self-taught-code-tokushima.com/unity/VR/trableshoot-in-development-unity-vr</guid>
@@ -59,12 +65,6 @@
     <guid>https://docs.self-taught-code-tokushima.com/unity/VR/play-in-quest-with-link-in-development</guid>
     <description><![CDATA[ VR での開発中に、シミュレータではなく実機で動作確認をしたい場合に Unity Editor から Play ボタンを押すだけで実機でのデバッグを可能にしてくれます。 これは Meta Quest での方法ですので、他の VR ヘッドセットでは同じようにできません Meta の解説ページ アプリ開発でLinkを使う | Meta Horizon OS Developers このページに沿って行えば問題ありません。 簡単に Meta 開発者アカウントが必要です おそらく皆さん作っていると思います Meta Horizon Link を PC にインストールする Quest Link と呼ばれて... ]]></description>
     <pubDate>Tue, 10 Mar 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Meta Quest 3 でのスクリーンショットの撮影方法</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/VR/screenshot-in-quest3</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/screenshot-in-quest3</guid>
-    <description><![CDATA[  Meta Quest Linkでスクリーンショットを撮影する - MRが楽しい MetaQuest3で画面キャプチャまたは録画を行う - MRが楽しい 上記の記事が詳しいです。 Quest3 上でのスクショ コントローラーの Metaボタン + 人差し指トリガー の同時押し 「写真を保存しました」のようなダイアログが出る カメラアプリでも可能 Link アプリ上のスクショ コントローラーのみでの撮影ができない ホームのコントロールパネルの時計をクリックした時にでるパネルにスクショボタンがある Meta Quest Linkでスクリーンショットを撮影する - MRが楽しい に詳細があります . ]]></description>
-    <pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
