@@ -6,6 +6,12 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Unity VR 開発時のトラブルシュート</title>
+    <link>https://docs.self-taught-code-tokushima.com/unity/VR/trableshoot-in-development-unity-vr</link>
+    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/trableshoot-in-development-unity-vr</guid>
+    <description><![CDATA[ 実機実行がうまくいかない コントローラーの場所がおかしい・反応しない XR が読み込まれていないという類の突然何もしていないのに発生するエラー BuildFailedException: No OpenXR loader library found. ]]></description>
+    <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>Quest 3 での Meta XR の始め方</title>
     <link>https://docs.self-taught-code-tokushima.com/unity/VR/meta-xr-on-quest3-first-step</link>
     <guid>https://docs.self-taught-code-tokushima.com/unity/VR/meta-xr-on-quest3-first-step</guid>
@@ -58,12 +64,6 @@
     <link>https://docs.self-taught-code-tokushima.com/unity/VR/screenshot-in-quest3</link>
     <guid>https://docs.self-taught-code-tokushima.com/unity/VR/screenshot-in-quest3</guid>
     <description><![CDATA[  Meta Quest Linkでスクリーンショットを撮影する - MRが楽しい MetaQuest3で画面キャプチャまたは録画を行う - MRが楽しい 上記の記事が詳しいです。 Quest3 上でのスクショ コントローラーの Metaボタン + 人差し指トリガー の同時押し 「写真を保存しました」のようなダイアログが出る カメラアプリでも可能 Link アプリ上のスクショ コントローラーのみでの撮影ができない ホームのコントロールパネルの時計をクリックした時にでるパネルにスクショボタンがある Meta Quest Linkでスクリーンショットを撮影する - MRが楽しい に詳細があります . ]]></description>
-    <pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Unity のフォルダ構成例</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/folder-structure-in-unity</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/folder-structure-in-unity</guid>
-    <description><![CDATA[ Unity のフォルダ構成例を説明します。最初のうちは Assets フォルダの下に全部のファイルを置いてしまうかもしれませんが、少しずつ整理していきましょう。 最初に注意 注意点として、Unity に限らずフォルダ構成や命名（ファイルやフォルダの名前付け）というのは「どのように整理するか？」を表したものなので正解はありません。 多くの開発者や会社で様々なフォルダ構成が使われており、それは「個人のやりやすさ」、または「組織構造（どういうチームがどのように分業しているか）」に関わります。 学生の間は一人で作ることも多いと思いますので、基本は基本として守りつつ、自分のやりやすいようにカスタマイズし... ]]></description>
     <pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
