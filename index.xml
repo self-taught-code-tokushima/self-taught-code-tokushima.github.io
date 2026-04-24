@@ -6,6 +6,12 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Sufo for Windows で管理者権限を使いやすくする</title>
+    <link>https://docs.self-taught-code-tokushima.com/Tools/sudo-for-windows</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Tools/sudo-for-windows</guid>
+    <description><![CDATA[ Sudo for Windows | Microsoft Learn これまで PowerShell 等で管理者権限が必要な操作をする場合は、以下のように「管理者権限で実行」を別途行う必要がありました。 この Sudo for Windows は、Linux の sudo のように、一時的に管理者権限を付与して実行することが可能です。 有効化の方法 特にインストール等は必要なく、設定から有効化するだけです。検索窓で sudo などと入力すれば、この設定がサジェストされるはずです。 ターミナルで以下のように表示されれば成功です。 &gt; sudo sudo for Windows Usage:... ]]></description>
+    <pubDate>Thu, 23 Apr 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>Unity+VRゲーム開発ガイド Chapter9 の補完</title>
     <link>https://docs.self-taught-code-tokushima.com/unity/VR/vrlearning-book-chapter9</link>
     <guid>https://docs.self-taught-code-tokushima.com/unity/VR/vrlearning-book-chapter9</guid>
@@ -58,12 +64,6 @@
     <link>https://docs.self-taught-code-tokushima.com/unity/VR/links-for-unity-vr</link>
     <guid>https://docs.self-taught-code-tokushima.com/unity/VR/links-for-unity-vr</guid>
     <description><![CDATA[ XR Interaction Toolkit Changelog | XR Interaction Toolkit | 3.4.0 更新情報を確認できる 「この API はまだ使えるかな？」と思ったら見てみよう . ]]></description>
-    <pubDate>Tue, 10 Mar 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>開発中に Quest 3 で Meta Quest Link を使ってテストプレイする</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/VR/play-in-quest-with-link-in-development</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/play-in-quest-with-link-in-development</guid>
-    <description><![CDATA[ VR での開発中に、シミュレータではなく実機で動作確認をしたい場合に Unity Editor から Play ボタンを押すだけで実機でのデバッグを可能にしてくれます。 これは Meta Quest での方法ですので、他の VR ヘッドセットでは同じようにできません Meta の解説ページ アプリ開発でLinkを使う | Meta Horizon OS Developers このページに沿って行えば問題ありません。 簡単に Meta 開発者アカウントが必要です おそらく皆さん作っていると思います Meta Horizon Link を PC にインストールする Quest Link と呼ばれて... ]]></description>
     <pubDate>Tue, 10 Mar 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
