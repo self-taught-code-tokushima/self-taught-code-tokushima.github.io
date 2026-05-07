@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>Unity VR の Rigidbody Locomotion プロジェクトの概要</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans JP:wght@400;700&amp;family=IBM Plex Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Self-Taught CODE Tokushima Resources"/><meta property="og:title" content="Unity VR の Rigidbody Locomotion プロジェクトの概要"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Unity VR の Rigidbody Locomotion プロジェクトの概要"/><meta name="twitter:description" content="プロジェクトリポジトリ self-taught-code-tokushima/UnityVR_SimplePhysicsLocomotion 目的 Unity の XR Interaction Toolkit（XRIT）は、VR 向けの移動（Move）・ジャンプ（Jump）・回転（Turn）をすぐに使える LocomotionProvider として提供している。 このプロジェクトでは、物理ベースのハンドトラッキング（物理の手） を実現するために XR Origin に Rigidbody を付けた。すると標準の Locomotion システムが動かなくなった。 原因を一言で言えば： 「XRI..."/><meta property="og:description" content="プロジェクトリポジトリ self-taught-code-tokushima/UnityVR_SimplePhysicsLocomotion 目的 Unity の XR Interaction Toolkit（XRIT）は、VR 向けの移動（Move）・ジャンプ（Jump）・回転（Turn）をすぐに使える LocomotionProvider として提供している。 このプロジェクトでは、物理ベースのハンドトラッキング（物理の手） を実現するために XR Origin に Rigidbody を付けた。すると標準の Locomotion システムが動かなくなった。 原因を一言で言えば： 「XRI..."/><meta property="og:image:alt" content="プロジェクトリポジトリ self-taught-code-tokushima/UnityVR_SimplePhysicsLocomotion 目的 Unity の XR Interaction Toolkit（XRIT）は、VR 向けの移動（Move）・ジャンプ（Jump）・回転（Turn）をすぐに使える LocomotionProvider として提供している。 このプロジェクトでは、物理ベースのハンドトラッキング（物理の手） を実現するために XR Origin に Rigidbody を付けた。すると標準の Locomotion システムが動かなくなった。 原因を一言で言えば： 「XRI..."/><meta property="twitter:domain" content="docs.self-taught-code-tokushima.com"/><meta property="og:url" content="https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/01-project-overview"/><meta property="twitter:url" content="https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/01-project-overview"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="プロジェクトリポジトリ self-taught-code-tokushima/UnityVR_SimplePhysicsLocomotion 目的 Unity の XR Interaction Toolkit（XRIT）は、VR 向けの移動（Move）・ジャンプ（Jump）・回転（Turn）をすぐに使える LocomotionProvider として提供している。 このプロジェクトでは、物理ベースのハンドトラッキング（物理の手） を実現するために XR Origin に Rigidbody を付けた。すると標準の Locomotion システムが動かなくなった。 原因を一言で言えば： 「XRI..."/><meta name="generator" content="Quartz"/><link href="../../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvc3RjLWRvY3Mvc3RjLWRvY3MvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://docs.self-taught-code-tokushima.com/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/01-project-overview-og-image.webp"/><meta property="og:image:url" content="https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/01-project-overview-og-image.webp"/><meta name="twitter:image" content="https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/01-project-overview-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="unity/VR/rigidbody-locomotion/01-project-overview"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title desktop-only"><a href="../../..">Self-Taught CODE Tokushima Resources</a></h2><h2 class="page-title mobile-only"><a href="../../..">STC/T Resources</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-89"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Contents</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-89" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../unity/">Unity</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../unity/VR/">VR</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../unity/VR/rigidbody-locomotion/">rigidbody locomotion</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Unity VR の Rigidbody Locomotion プロジェクトの概要</a></div></nav><h1 class="article-title">Unity VR の Rigidbody Locomotion プロジェクトの概要</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-07T00:00:00.000Z">2026年5月07日</time><span>19 min read</span></p><ul class="tags"><li><a href="../../../tags/Unity" class="internal tag-link">Unity</a></li><li><a href="../../../tags/VR" class="internal tag-link">VR</a></li></ul></div></div><article class="popover-hint"><h2 id="プロジェクトリポジトリ">プロジェクトリポジトリ<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#プロジェクトリポジトリ" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="https://github.com/self-taught-code-tokushima/UnityVR_SimplePhysicsLocomotion" class="external">self-taught-code-tokushima/UnityVR_SimplePhysicsLocomotion<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<h2 id="目的">目的<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#目的" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Unity の XR Interaction Toolkit（XRIT）は、VR 向けの移動（Move）・ジャンプ（Jump）・回転（Turn）をすぐに使える <code>LocomotionProvider</code> として提供している。</p>
+<p>このプロジェクトでは、<strong>物理ベースのハンドトラッキング（物理の手）</strong> を実現するために XR Origin に <code>Rigidbody</code> を付けた。すると標準の Locomotion システムが動かなくなった。</p>
+<p>原因を一言で言えば：</p>
+<blockquote>
+<p><strong>「XRIT 標準の Locomotion は CharacterController（または Transform の直接操作）前提で設計されており、Rigidbody と根本的に相性が悪い」</strong></p>
+</blockquote>
+<p>この記事では、標準システムとの相性は何が問題で、どう変更したかを、コードを対比しながら解説する。</p>
+<hr/>
+<h2 id="第1章xrit-の-locomotion-アーキテクチャを理解する">第1章：XRIT の Locomotion アーキテクチャを理解する<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#第1章xrit-の-locomotion-アーキテクチャを理解する" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="標準システムの全体像">標準システムの全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#標準システムの全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>XRIT の Locomotion は以下の 3 層で構成されている。</p>
+<pre><code>┌──────────────────────────────────────────────┐
+│  LocomotionProvider（移動・ジャンプ・回転）   │  ← 各プロバイダが処理を登録
+│   ContinuousMoveProvider                     │
+│   JumpProvider                               │
+│   SnapTurnProvider  etc.                     │
+└────────────────┬─────────────────────────────┘
+                 │ TryQueueTransformation()
+                 ▼
+┌──────────────────────────────────────────────┐
+│  LocomotionMediator                           │  ← 優先度管理・排他制御
+│  （どの Provider が今動いていいかを判断）      │
+└────────────────┬─────────────────────────────┘
+                 │
+                 ▼
+┌──────────────────────────────────────────────┐
+│  XRBodyTransformer                            │  ← 実際の Transform 操作
+│  transformation.Apply()                       │
+│  → CharacterController.Move() or             │
+│     transform.position += motion             │
+└──────────────────────────────────────────────┘
+</code></pre>
+<p>各 Provider は「こう動かしたい」という <strong>Transformation（変換情報）</strong> を登録するだけで、実際に XR Origin を動かすのは <code>XRBodyTransformer</code> の役割だ。</p>
+<h3 id="rigidbody-との非互換な前提">Rigidbody との非互換な前提<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rigidbody-との非互換な前提" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>標準システムが最終的に行う操作は：</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// XROriginMovement.Apply() の内部（XRIT パッケージ内）</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">characterController.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">Move</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(motion);</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// または</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">origin.transform.position </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">+=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> motion;</span></span></code></pre></figure>
+<p><strong><code>transform.position</code> の直接書き換えは、Rigidbody が存在するオブジェクトでは避けた方がよい。</strong></p>
+<p>Unity の物理エンジン（PhysX）は、<code>FixedUpdate</code> のタイミングで Rigidbody の位置を管理している。<code>Update</code> で <code>transform.position</code> を直接書き換えると、物理エンジンが「オブジェクトが突然ワープした」と判断し、<strong>衝突判定の無視・速度の乱れ・物理的に不自然な挙動</strong> が起きる。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>問題</th><th>内容</th></tr></thead><tbody><tr><td>タイミング不整合</td><td>標準は <code>Update()</code> ベース。Rigidbody は <code>FixedUpdate()</code> で管理される</td></tr><tr><td>衝突のバイパス</td><td><code>transform.position += motion</code> は物理エンジンの衝突判定を無視する</td></tr><tr><td>重力の二重管理</td><td><code>GravityProvider</code> の重力と Rigidbody の <code>useGravity</code> が干渉する</td></tr></tbody></table></div>
+<h3 id="解決策locomotionmediator-を使わない設計を選ぶ">解決策：LocomotionMediator を使わない設計を選ぶ<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#解決策locomotionmediator-を使わない設計を選ぶ" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>このプロジェクトでは、Locomotion プロバイダをすべて <strong>独立した <code>MonoBehaviour</code></strong> として作り直した。XRIT の <code>LocomotionProvider</code> を継承せず、<code>LocomotionMediator</code> も使わない方針をとった。</p>
+<pre><code>【移植後のアーキテクチャ】
+
+RigidbodyMoveProvider (MonoBehaviour)
+RigidbodyJumpProvider (MonoBehaviour)                      Rigidbody を直接操作
+RigidbodyTurnProviderBase (abstract MonoBehaviour)
+  ├─ RigidbodyContinuousTurnProvider          共通の入力読み取り・TurnRig() を基底クラスに集約
+  └─ RigidbodySnapTurnProvider
+</code></pre>
+<p>シンプルだが、<code>LocomotionMediator</code> が担っていた「優先度管理・排他制御・状態イベント（locomotionStarted/Ended）」は失われる。このプロジェクトでは PhysicsHand シーンに特化しており、それらが不要なためこの方針が成立している。汎用的な VR アプリでは <code>LocomotionMediator</code> の恩恵が必要になる場面もあるため、プロジェクトの要件に応じて判断することを勧める。</p>
+<hr/>
+<h2 id="第2章move移動の移植">第2章：Move（移動）の移植<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#第2章move移動の移植" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="xrit-標準の移動処理">XRIT 標準の移動処理<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#xrit-標準の移動処理" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><code>ContinuousMoveProvider</code> は <code>Update()</code> の中で以下のフローを実行する。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// ContinuousMoveProvider.Update()（XRIT）</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">protected</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Update</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    var</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> input</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> ReadInput</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">();                      </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 左右入力を合算</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    var</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> motion</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> ComputeDesiredMove</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(input);       </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 移動量（ワールド座標）を計算</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    MoveRig</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(motion);                              </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// XRBodyTransformer に登録</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// MoveRig() の末尾</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">transformation.motion </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> motion;</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">TryQueueTransformation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(transformation);</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// → XRBodyTransformer が transform.position += motion を実行</span></span></code></pre></figure>
+<p><code>ComputeDesiredMove</code> が返すのは <strong>1フレーム分の移動量（position delta）</strong> だ。速度に <code>Time.deltaTime</code> を掛けた値になっている。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">var</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> speedFactor</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_MoveSpeed </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> deltaTime </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> originTransform.localScale.x;</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// ...</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">var</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> translationInRigSpace</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> forwardRotation </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_InAirVelocity </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> speedFactor;</span></span></code></pre></figure>
+<h3 id="rigidbody-ベースへの変更">Rigidbody ベースへの変更<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rigidbody-ベースへの変更" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Rigidbody で移動を制御するには、<strong>位置を直接変えるのではなく「速度（velocity）」を設定する</strong> のが正しいアプローチだ。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// RigidbodyMoveProvider.FixedUpdate()</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> FixedUpdate</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    var</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> v</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_Rigidbody.linearVelocity;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    v.x </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_DesiredHorizontalVelocity.x;  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 水平方向だけ上書き</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    v.z </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_DesiredHorizontalVelocity.z;</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // v.y は触らない → 重力・ジャンプの Y 速度を保持</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    m_Rigidbody.linearVelocity </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> v;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<h4 id="position-delta-vs-velocity-の対比">position delta vs velocity の対比<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#position-delta-vs-velocity-の対比" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th></th><th>XRIT 標準</th><th>Rigidbody 版</th></tr></thead><tbody><tr><td>操作対象</td><td><code>transform.position</code> (位置の差分を加算)</td><td><code>rb.linearVelocity</code> (速度を設定)</td></tr><tr><td>適用タイミング</td><td><code>Update()</code></td><td><code>FixedUpdate()</code></td></tr><tr><td>重力の扱い</td><td><code>GravityProvider</code> が <code>motion.y</code> を計算して加算</td><td><code>rb.useGravity = true</code> で物理エンジンに委託</td></tr></tbody></table></div>
+<h4 id="なぜ-update-と-fixedupdate-に分けるのか">なぜ Update と FixedUpdate に分けるのか？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#なぜ-update-と-fixedupdate-に分けるのか" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p><code>Update()</code> は毎フレーム呼ばれるが、フレームレートが変動すると呼び出し間隔が変わる。一方 <code>FixedUpdate()</code> は一定間隔（デフォルト 0.02秒ごと）で呼ばれ、物理エンジンと同期している。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Update</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // 入力の読み取りはフレームごとでOK（取りこぼしを防ぐため Update で）</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    var</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> input</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> ReadInput</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">();</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    m_DesiredHorizontalVelocity </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> ComputeDesiredMove</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(input);  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// キャッシュ</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> FixedUpdate</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // Rigidbody への書き込みは FixedUpdate で（物理エンジンと同期）</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    var</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> v</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_Rigidbody.linearVelocity;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    v.x </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_DesiredHorizontalVelocity.x;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    v.z </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_DesiredHorizontalVelocity.z;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    m_Rigidbody.linearVelocity </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> v;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<p><code>m_DesiredHorizontalVelocity</code> は <code>Update</code> と <code>FixedUpdate</code> の間の <strong>バッファ（橋渡し変数）</strong> として機能している。</p>
+<h4 id="computedesiredmove-の変更点">ComputeDesiredMove の変更点<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#computedesiredmove-の変更点" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>方向計算のロジック（DynamicMoveProvider と同じ「左右入力ブレンド」アルゴリズム）は流用できる。変わるのは <strong>返す値の意味</strong> だ。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// XRIT：1フレームの移動量（= 速度 × deltaTime）を返す</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">var</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> speedFactor</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_MoveSpeed </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> Time.deltaTime;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> originTransform.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">TransformDirection</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(forwardRotation </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> inputMove </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> speedFactor);</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// Rigidbody 版：速度（m/s）を返す（deltaTime を掛けない）</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> originTransform.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">TransformDirection</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(forwardRotation </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> inputMove </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_MoveSpeed);</span></span></code></pre></figure>
+<p>XRIT 版は「毎フレーム位置を動かす量」、Rigidbody 版は「秒速 N メートルの速度ベクトル」を返している。<code>FixedUpdate</code> で <code>linearVelocity</code> に代入するため、deltaTime は不要になる。</p>
+<hr/>
+<h2 id="第3章jumpジャンプの移植">第3章：Jump（ジャンプ）の移植<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#第3章jumpジャンプの移植" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="xrit-標準の-jump-処理">XRIT 標準の Jump 処理<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#xrit-標準の-jump-処理" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><code>JumpProvider</code> は <strong>「毎フレーム上方向に位置を加算していく」</strong> モデルで実装されている。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// JumpProvider.UpdateJump()（XRIT）</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> UpdateJump</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    ProcessJumpForce</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(Time.deltaTime);</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // jumpForce は時間とともに減衰する（山なりの軌跡）</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    m_JumpVector.y </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_CurrentJumpForceThisFrame </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> Time.deltaTime;</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    transformation.motion </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_JumpVector;</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    TryQueueTransformation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(transformation);  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// → transform.position += motion</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 力の減衰計算</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">float</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> CalculateJumpForceForFrame</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">float</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> normalizedJumpTime</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // 正規化時間 0→1 で力が (1 - t) の形で減衰</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> -</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> normalizedJumpTime) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_JumpHeight </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> approximateForceToMeters;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<p>重力は <code>GravityProvider</code> が別途管理し、<code>JumpProvider</code> はジャンプの上昇分だけを担当する。接地判定も <code>GravityProvider.isGrounded</code> に依存しており、<strong>JumpProvider 単独では動かない</strong>。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// Awake() で GravityProvider を検索、なければ自身を無効化</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">m_HasGravityProvider </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ComponentLocatorUtility&lt;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">GravityProvider</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">>.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">TryFindComponent</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">out</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_GravityProvider);</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">!</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">m_HasGravityProvider)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    Debug.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">LogError</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;Could not find Gravity Provider...&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    enabled </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> false</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<h3 id="rigidbody-ベースへの変更-1">Rigidbody ベースへの変更<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rigidbody-ベースへの変更-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Rigidbody があれば、重力は <code>useGravity = true</code> で物理エンジンが自動処理する。ジャンプは <strong><code>AddForce(Impulse)</code></strong> で瞬間的な上向き速度を与えるだけでいい。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// RigidbodyJumpProvider.FixedUpdate()</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> FixedUpdate</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (m_JumpRequested </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">&amp;&amp;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> IsGrounded</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        m_Rigidbody.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">AddForce</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">            m_XROrigin.Origin.transform.up </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_JumpForce,</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">            ForceMode.Impulse  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 瞬間的な衝撃力</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        );</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    m_JumpRequested </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> false</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<h4 id="forcemode-の違い">ForceMode の違い<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#forcemode-の違い" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p><code>AddForce</code> には複数のモードがある：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>ForceMode</th><th>効果</th><th>使いどき</th></tr></thead><tbody><tr><td><code>Force</code></td><td>質量を考慮した継続的な力</td><td>エンジン・風など</td></tr><tr><td><code>Acceleration</code></td><td>質量無視の継続的な加速</td><td>重力など</td></tr><tr><td><code>Impulse</code></td><td>質量を考慮した瞬間的な力</td><td><strong>ジャンプ・爆発など</strong></td></tr><tr><td><code>VelocityChange</code></td><td>質量無視の瞬間的な速度変化</td><td>速度を直接設定したいとき</td></tr></tbody></table></div>
+<p><code>Impulse</code> は「力積（force × time）」に相当し、<code>mass × velocity</code> の単位を持つ。つまり <strong>Rigidbody の質量が大きいほど、同じ jumpForce では飛ぶ高さが低くなる</strong> ことに注意が必要だ。</p>
+<h4 id="接地判定の変更">接地判定の変更<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#接地判定の変更" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>XRIT の <code>GravityProvider</code> は <strong>頭部（カメラ）の位置から下向きに SphereCast</strong> で接地を判定する。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// GravityProvider.CheckGrounded()（XRIT）</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">m_CastOrigin </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> GetBodyHeadPosition</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">();           </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 頭の位置から</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">m_CastDirection </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> -</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">GetCurrentUp</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">();              </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 下方向へ</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">m_CastDistance </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> CameraInOriginSpaceHeight;     </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 身長分の距離</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Physics.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">SphereCast</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(origin, radius, dir, hits, distance, layerMask);</span></span></code></pre></figure>
+<p>Rigidbody 版では、<strong>カプセルコライダーの底部から <code>CheckSphere</code></strong> を使う。物理エンジンの衝突判定に使われているコライダーと形状が一致するため、より正確だ。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// RigidbodyJumpProvider.IsGrounded()</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">bool</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> IsGrounded</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    var</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> center</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> origin.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">TransformPoint</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(m_CapsuleCollider.center);</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // カプセルの底面球の中心を計算</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    var</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> bottomCenter</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> center </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> origin.up </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (m_CapsuleCollider.height </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">/</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 2f</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> -</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_CapsuleCollider.radius);</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> Physics.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">CheckSphere</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        bottomCenter,</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        m_CapsuleCollider.radius </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">+</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_GroundCheckDistance,  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 少しだけ大きめに</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        m_GroundLayerMask,</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        QueryTriggerInteraction.Ignore</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    );</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<pre><code>【XRIT の接地判定】           【Rigidbody 版の接地判定】
+
+  ★ 頭の位置                     ○ カプセルの上端
+  |                              |
+  | SphereCast（長い）           |
+  |                              ○ カプセルの底端
+  ↓                           (   ) ← CheckSphere（小さい球）
+=======床=======            =======床=======
+</code></pre>
+<h4 id="ボタン入力の違い">ボタン入力の違い<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ボタン入力の違い" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>XRIT の <code>JumpProvider</code> は <code>XRInputButtonReader</code>（ボタン専用リーダー）を使い、<code>ReadIsPerformed()</code> で「押されているか」を判定する。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// JumpProvider（XRIT）：「押されている間」を検出</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">!</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">m_HasJumped </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">&amp;&amp;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_JumpInput.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">ReadIsPerformed</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    Jump</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">();</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// m_HasJumped フラグでボタンを離すまで再ジャンプを防ぐ</span></span></code></pre></figure>
+<p>Rigidbody 版も同じく <code>XRInputButtonReader</code> を使い、<code>ReadWasPerformedThisFrame()</code> で「押した瞬間」を拾う。Input System がフレーム単位のエッジ検出を内部で行うため、手動のフラグ管理が不要になった。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// RigidbodyJumpProvider（Rigidbody 版）：「押した瞬間」を検出</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Update</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // ReadWasPerformedThisFrame() はこのフレームで初めて押された時だけ true</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (m_JumpInput.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">ReadWasPerformedThisFrame</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        m_JumpRequested </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<p>どちらも「ボタンを押し続けても1回しかジャンプしない」という動作だが、Rigidbody 版は Input System に判定を委ねることで <code>m_WasJumpPressed</code> のようなフラグ変数が不要になっている。</p>
+<hr/>
+<h2 id="第4章turn回転の移植">第4章：Turn（回転）の移植<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#第4章turn回転の移植" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="xrit-標準の回転処理">XRIT 標準の回転処理<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#xrit-標準の回転処理" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><code>ContinuousTurnProvider</code>・<code>SnapTurnProvider</code> ともに、最終的に <code>XRBodyYawRotation</code> という Transformation を <code>XRBodyTransformer</code> に渡し、<strong>Y 軸回転を Transform に直接適用</strong> している。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// ContinuousTurnProvider.TurnRig()（XRIT）</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">transformation.angleDelta </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> turnAmount;</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">TryQueueTransformation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(transformation);</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// → XRBodyYawRotation.Apply() が origin.transform.rotation を変更</span></span></code></pre></figure>
+<p><code>XRBodyYawRotation.Apply()</code> の内部では、カメラ（頭）の位置を基準にした Y 軸回転が計算される。つまり <strong>「頭の位置の真下を軸として回転」するピボット処理</strong> が含まれている。</p>
+<h3 id="rigidbody-ベースへの変更turnrig-の実装">Rigidbody ベースへの変更：TurnRig の実装<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rigidbody-ベースへの変更turnrig-の実装" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Rigidbody に対して <code>transform.rotation</code> を直接変えると、物理エンジンが「オブジェクトが瞬間的に向きを変えた」と誤認する。正しくは <strong><code>MoveRotation()</code></strong> を使う。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// RigidbodyContinuousTurnProvider.TurnRig()（Rigidbody 版）</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> TurnRig</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">float</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> turnAmount</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    var</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> origin</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_XROrigin.Origin.transform;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    var</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> pivot</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> GetBodyGroundWorldPosition</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">();  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// ピボット点を自前で計算</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    var</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> rot</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> Quaternion.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">AngleAxis</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(turnAmount, origin.up);</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    m_Rigidbody.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">MovePosition</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(pivot </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">+</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> rot </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (m_Rigidbody.position </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> pivot));</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    m_Rigidbody.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">MoveRotation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(rot </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_Rigidbody.rotation);</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<h4 id="moveposition--moverotation-vs-transform-への直接操作">MovePosition / MoveRotation vs transform への直接操作<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#moveposition--moverotation-vs-transform-への直接操作" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th></th><th><code>transform.position =</code> / <code>transform.rotation =</code></th><th><code>rb.MovePosition()</code> / <code>rb.MoveRotation()</code></th></tr></thead><tbody><tr><td>呼び出しタイミング</td><td>いつでも可</td><td><code>FixedUpdate()</code> 内で使うべき</td></tr><tr><td>物理エンジンとの整合</td><td><strong>無視する</strong>（ワープ扱い）</td><td><strong>協調する</strong>（衝突判定を維持）</td></tr><tr><td>中間の衝突判定</td><td>なし</td><td>あり</td></tr><tr><td>速度のリセット</td><td>なし（速度は変わらない）</td><td>なし</td></tr></tbody></table></div>
+<p><code>MovePosition</code> は「次の FixedUpdate までの間に、衝突を検知しながら目的地まで動かす」という動作をする。Rigidbody を持つオブジェクトの移動・回転には、このアプローチが適している。</p>
+<h4 id="ピボット計算を自前で実装する">ピボット計算を自前で実装する<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ピボット計算を自前で実装する" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>XRIT の <code>XRBodyYawRotation</code> が内部でやっていたピボット計算を、自前で実装する必要があった。</p>
+<p><strong>目標：「カメラ（頭）の位置の真下（床面）」を軸として回転させる</strong></p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">protected</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Vector3</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> GetBodyGroundWorldPosition</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // CameraInOriginSpacePos: カメラの XR Origin ローカル座標を返す API</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    var</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> bodyLocalPos</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_XROrigin.CameraInOriginSpacePos;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    bodyLocalPos.y </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0f</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// ローカル Y を 0 にして床面上の点を得る</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_XROrigin.Origin.transform.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">TransformPoint</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(bodyLocalPos);</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<p><code>m_XROrigin.CameraInOriginSpacePos</code> はカメラの XR Origin ローカル座標を返す。ローカル Y を 0 にすることで「カメラ真下の Origin ローカル床面の点」を得て、<code>TransformPoint</code> でワールド座標に変換する。</p>
+<pre><code>CameraInOriginSpacePos    ←── カメラの Origin ローカル座標 (x, y, z)
+↓ y = 0 にする
+(x, 0, z)                 ←── 高さ成分をゼロにした水平位置
+↓ TransformPoint でワールド座標へ
+GetBodyGroundWorldPosition()  ←── 床面上のカメラ直下の点（ピボット点）
+</code></pre>
+<p>図にすると：</p>
+<pre><code>  ★ カメラ（頭）
+  |  ↑ CameraInOriginSpacePos.y（ローカル Y）をゼロにして除去
+  ●  ← GetBodyGroundWorldPosition() = ピボット点
+  |
+  □ origin.position
+======= 床
+</code></pre>
+<h4 id="snap-と-continuous-の入力処理の違い">Snap と Continuous の入力処理の違い<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#snap-と-continuous-の入力処理の違い" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p><strong>SnapTurnProvider（XRIT）</strong>：<code>CardinalUtility.GetNearestCardinal()</code> で入力方向を 4 方向に分類する。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// SnapTurnProvider.GetTurnAmount()（XRIT）</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">var</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> cardinal</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> CardinalUtility.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">GetNearestCardinal</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(input);</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">switch</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (cardinal)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    case</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Cardinal</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">East</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_TurnAmount;    </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 右に45°</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    case</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Cardinal</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">West</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">return</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> -</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">m_TurnAmount;   </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 左に45°</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    case</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Cardinal</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">South</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 180f</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;            </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 後ろに180°</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<p><strong>RigidbodySnapTurnProvider</strong>：Cardinal 分類を使わず、閾値（0.5）比較と立ち上がりエッジ検出で実装した。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// RigidbodySnapTurnProvider.GetTurnAmount()</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">float</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> GetTurnAmount</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">Vector2</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> input</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (m_EnableTurnAround </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">&amp;&amp;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> input.y </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">&lt;=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> -</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">k_Threshold)  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 後ろ倒しを優先</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">        return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 180f</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (m_EnableTurnLeftRight </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">&amp;&amp;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> Mathf.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">Abs</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(input.x) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">>=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> k_Threshold)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">        return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> Mathf.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">Sign</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(input.x) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_TurnAmount;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0f</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<p>XRIT 版と同様、Rigidbody 版も左右の入力を <strong>合算（left + right）</strong> する。共通処理は <code>RigidbodyTurnProviderBase.ReadInput()</code> に集約されている。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// ReadInput()（RigidbodyTurnProviderBase）- XRIT と同じく合算</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">protected</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Vector2</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> ReadInput</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_LeftHandTurnInput.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">ReadValue</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">() </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">+</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_RightHandTurnInput.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">ReadValue</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">();</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<p>デバウンス（連続スナップ防止）の実装も異なる：</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// XRIT：Time.time を記録して経過時間を比較</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (m_TimeStarted </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">></span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0f</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> &amp;&amp;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (m_TimeStarted </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">+</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_DebounceTime </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> Time.time))</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    m_TimeStarted </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0f</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// デバウンス解除</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// Rigidbody 版：カウントダウン方式</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">m_DebounceTimer </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">-=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> Time.deltaTime;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (isActive </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">&amp;&amp;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> !</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">m_WasActive </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">&amp;&amp;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_DebounceTimer </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">&lt;=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0f</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    m_CurrentTurnAmount </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> snapAngle;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    m_DebounceTimer </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_DebounceTime;  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// タイマーリセット</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<p><strong>ContinuousTurnProvider の入力スケーリング</strong>：XRIT 版は <code>input.magnitude</code> でアナログ入力の大きさを回転速度に反映する。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// ContinuousTurnProvider.GetTurnAmount()（XRIT）</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> input.magnitude </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (Mathf.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">Sign</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(input.x) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_TurnSpeed </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> Time.deltaTime);</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// スティックを半分倒すと半分のスピードで回転</span></span></code></pre></figure>
+<p>Rigidbody 版も XRIT と同様に <code>input.magnitude</code> を使う（<code>Time.fixedDeltaTime</code> を使う点のみ異なる）。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// RigidbodyContinuousTurnProvider.GetTurnAmount()</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> input.magnitude </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (Mathf.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">Sign</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(input.x) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> m_TurnSpeed </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> Time.fixedDeltaTime);</span></span></code></pre></figure>
+<hr/>
+<h2 id="第5章移植のまとめとパターン">第5章：移植のまとめとパターン<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#第5章移植のまとめとパターン" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="移植で現れた共通パターン">移植で現れた共通パターン<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#移植で現れた共通パターン" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>この移植全体を通じて、3つの変更パターンがあった。</p>
+<h4 id="パターン-atransform-操作--rigidbody-api-に置き換える">パターン A：Transform 操作 → Rigidbody API に置き換える<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#パターン-atransform-操作--rigidbody-api-に置き換える" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>変更前（XRIT）</th><th>変更後（Rigidbody 版）</th></tr></thead><tbody><tr><td><code>transform.position += motion</code></td><td><code>rb.linearVelocity = velocity</code></td></tr><tr><td><code>transform.rotation = newRot</code></td><td><code>rb.MovePosition()</code> + <code>rb.MoveRotation()</code></td></tr><tr><td><code>CharacterController.Move()</code></td><td><code>rb.AddForce(, Impulse)</code></td></tr></tbody></table></div>
+<h4 id="パターン-bupdate-タイミング--fixedupdate-タイミングに分離する">パターン B：Update タイミング → FixedUpdate タイミングに分離する<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#パターン-bupdate-タイミング--fixedupdate-タイミングに分離する" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>どのクラスも「<code>Update</code> で入力を読んでキャッシュ → <code>FixedUpdate</code> で Rigidbody に適用」という 2 段構成になっている。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="csharp" data-theme="github-light github-dark"><code data-language="csharp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 共通パターン</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Update</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()    { m_CachedXxx </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> ReadInput</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">() </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">+</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 計算; }</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> FixedUpdate</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">() { Apply m_CachedXxx </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">to</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Rigidbody</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">; }</span></span></code></pre></figure>
+<h4 id="パターン-c依存コンポーネントの削除">パターン C：依存コンポーネントの削除<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#パターン-c依存コンポーネントの削除" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>XRIT 版</th><th>Rigidbody 版</th></tr></thead><tbody><tr><td><code>GravityProvider</code>（必須）</td><td><code>rb.useGravity = true</code>（物理エンジン）</td></tr><tr><td><code>LocomotionMediator</code>（必須）</td><td>不要</td></tr><tr><td><code>CharacterController</code>（必須）</td><td><code>CapsuleCollider</code> + <code>Rigidbody</code></td></tr></tbody></table></div>
+<hr/>
+<h3 id="失ったもの得たもの">失ったもの、得たもの<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#失ったもの得たもの" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>失ったもの（XRIT の機能で未実装）</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>機能</th><th>元のクラス</th></tr></thead><tbody><tr><td>コヨーテタイム（崖端ジャンプ猶予）</td><td><code>JumpProvider</code></td></tr><tr><td>可変高さジャンプ（長押しで高く）</td><td><code>JumpProvider</code></td></tr><tr><td>空中ジャンプ（多段ジャンプ）</td><td><code>JumpProvider</code></td></tr><tr><td>VR 酔い対策の回転 delay</td><td><code>SnapTurnProvider</code></td></tr><tr><td>他 Provider との排他制御</td><td><code>LocomotionMediator</code></td></tr><tr><td>空中での入力スムージング</td><td><code>ContinuousMoveProvider.inAirControlModifier</code></td></tr></tbody></table></div>
+<p><strong>得たもの（Rigidbody ならではの利点）</strong></p>
+<ul>
+<li><strong>物理ハンドとの自然な押し合い</strong>：プレイヤーの体が物理オブジェクトになるため、物理ハンドで壁を押しながら移動できる</li>
+<li><strong>摩擦・バウンドのシミュレーション</strong>：PhysicsMaterial による摩擦設定が機能する</li>
+<li><strong>Rigidbody 同士の衝突</strong>：他の物理オブジェクトと正しく干渉する</li>
+<li><strong>コードのシンプルさ</strong>：XRIT の <code>LocomotionMediator</code> 経由の複雑な状態管理が不要</li>
+</ul>
+<hr/>
+<h2 id="おわりに">おわりに<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#おわりに" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>XRIT の標準 Locomotion は「いつでも使えるレベルの汎用性」を追求して設計されており、テレポートや Vignette といった周辺機能との連携が容易になっている。一方、このプロジェクトでは「PhysicsHand シーン専用」に特化することで、コードをシンプルに保てた。</p>
+<p>どちらが優れているかではなく、プロジェクトの要件次第でトレードオフが変わる。ソフトウェア設計における <strong>「汎用性 vs シンプルさ」のトレードオフ</strong> がよく現れている例だ。汎用ライブラリを使わずに自前で実装するときは、「何を省略するか」を意識的に決めることが重要だ。</p>
+<hr/>
+<h2 id="参考ファイル">参考ファイル<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#参考ファイル" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>ファイル</th><th>役割</th></tr></thead><tbody><tr><td><code>Assets/SimplePhysicsLocomotion/Scripts/RigidbodyMoveProvider.cs</code></td><td>移動（実装）</td></tr><tr><td><code>Assets/SimplePhysicsLocomotion/Scripts/RigidbodyJumpProvider.cs</code></td><td>ジャンプ（実装）</td></tr><tr><td><code>Assets/SimplePhysicsLocomotion/Scripts/RigidbodySnapTurnProvider.cs</code></td><td>スナップ回転（実装）</td></tr><tr><td><code>Assets/SimplePhysicsLocomotion/Scripts/RigidbodyContinuousTurnProvider.cs</code></td><td>連続回転（実装）</td></tr><tr><td><code>Assets/SimplePhysicsLocomotion/Scripts/RigidbodyTurnProviderBase.cs</code></td><td>回転基底クラス（実装）</td></tr></tbody></table></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-31" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#プロジェクトリポジトリ" data-for="プロジェクトリポジトリ">プロジェクトリポジトリ</a></li><li class="depth-0"><a href="#目的" data-for="目的">目的</a></li><li class="depth-0"><a href="#第1章xrit-の-locomotion-アーキテクチャを理解する" data-for="第1章xrit-の-locomotion-アーキテクチャを理解する">第1章：XRIT の Locomotion アーキテクチャを理解する</a></li><li class="depth-1"><a href="#標準システムの全体像" data-for="標準システムの全体像">標準システムの全体像</a></li><li class="depth-1"><a href="#rigidbody-との非互換な前提" data-for="rigidbody-との非互換な前提">Rigidbody との非互換な前提</a></li><li class="depth-1"><a href="#解決策locomotionmediator-を使わない設計を選ぶ" data-for="解決策locomotionmediator-を使わない設計を選ぶ">解決策：LocomotionMediator を使わない設計を選ぶ</a></li><li class="depth-0"><a href="#第2章move移動の移植" data-for="第2章move移動の移植">第2章：Move（移動）の移植</a></li><li class="depth-1"><a href="#xrit-標準の移動処理" data-for="xrit-標準の移動処理">XRIT 標準の移動処理</a></li><li class="depth-1"><a href="#rigidbody-ベースへの変更" data-for="rigidbody-ベースへの変更">Rigidbody ベースへの変更</a></li><li class="depth-0"><a href="#第3章jumpジャンプの移植" data-for="第3章jumpジャンプの移植">第3章：Jump（ジャンプ）の移植</a></li><li class="depth-1"><a href="#xrit-標準の-jump-処理" data-for="xrit-標準の-jump-処理">XRIT 標準の Jump 処理</a></li><li class="depth-1"><a href="#rigidbody-ベースへの変更-1" data-for="rigidbody-ベースへの変更-1">Rigidbody ベースへの変更</a></li><li class="depth-0"><a href="#第4章turn回転の移植" data-for="第4章turn回転の移植">第4章：Turn（回転）の移植</a></li><li class="depth-1"><a href="#xrit-標準の回転処理" data-for="xrit-標準の回転処理">XRIT 標準の回転処理</a></li><li class="depth-1"><a href="#rigidbody-ベースへの変更turnrig-の実装" data-for="rigidbody-ベースへの変更turnrig-の実装">Rigidbody ベースへの変更：TurnRig の実装</a></li><li class="depth-0"><a href="#第5章移植のまとめとパターン" data-for="第5章移植のまとめとパターン">第5章：移植のまとめとパターン</a></li><li class="depth-1"><a href="#移植で現れた共通パターン" data-for="移植で現れた共通パターン">移植で現れた共通パターン</a></li><li class="depth-1"><a href="#失ったもの得たもの" data-for="失ったもの得たもの">失ったもの、得たもの</a></li><li class="depth-0"><a href="#おわりに" data-for="おわりに">おわりに</a></li><li class="depth-0"><a href="#参考ファイル" data-for="参考ファイル">参考ファイル</a></li><li class="overflow-end"></li></ul></div></div><footer class><p><a href="https://labo.self-taught-code-tokushima.com/" target="_blank">Self-Taught CODE Labo / 徳島</a> © 2026</p><ul><li><a href="https://github.com/self-taught-code-tokushima">GitHub</a></li><li><a href="https://x.com/stc_tokushima">X</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript.js" type="module" data-persist="true"></script></html>

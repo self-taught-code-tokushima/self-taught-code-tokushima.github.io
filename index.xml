@@ -12,59 +12,59 @@
     <description><![CDATA[ Windows での Microsoft Defender からの除外 環境 Windows 11 Home Microsoft Defender のマルウェアチェック処理 タスクマネージャーを参照すると、以下のような Antimalware Service Executable が CPU を使っていることがあるのに気づくかもしれません。 これ自体は、ダウンロード等で追加されたファイルなどがマルウェアに侵されていないかをチェックするために重要なのですが、ゲーム開発のアセット追加時のように大量のファイルを追加する場合はそれだけで時間を使ってしまいます。 ゲームエンジンの場合はビルド時にもファイ... ]]></description>
     <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
   </item><item>
+    <title>Unity VR の Rigidbody Locomotion プロジェクトの概要</title>
+    <link>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/01-project-overview</link>
+    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/01-project-overview</guid>
+    <description><![CDATA[ プロジェクトリポジトリ self-taught-code-tokushima/UnityVR_SimplePhysicsLocomotion 目的 Unity の XR Interaction Toolkit（XRIT）は、VR 向けの移動（Move）・ジャンプ（Jump）・回転（Turn）をすぐに使える LocomotionProvider として提供している。 このプロジェクトでは、物理ベースのハンドトラッキング（物理の手） を実現するために XR Origin に Rigidbody を付けた。すると標準の Locomotion システムが動かなくなった。 原因を一言で言えば： 「XRI... ]]></description>
+    <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>DynamicMoveProvider と RigidbodyMoveProvider の比較</title>
+    <link>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/02-dynamic-vs-rigidbody-move-provider</link>
+    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/02-dynamic-vs-rigidbody-move-provider</guid>
+    <description><![CDATA[ ここでは、「移動」の処理について、XRIT の DynamicMoveProvider と Rigidbody 版の RigidbodyMoveProvider を比較しつつ、Rigidbody 版の詳細を確認していく。 概要 項目DynamicMoveProviderRigidbodyMoveProvider基底クラスContinuousMoveProvider → LocomotionProviderMonoBehaviour物理コンポーネントCharacterControllerRigidbody + CapsuleCollider移動適用Update() 内で XROriginMove... ]]></description>
+    <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>JumpProvider と RigidbodyJumpProvider の比較</title>
+    <link>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/03-jump-provider-vs-rigidbody-jump-provider</link>
+    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/03-jump-provider-vs-rigidbody-jump-provider</guid>
+    <description><![CDATA[ ここでは、「ジャンプ」の処理について、XRIT の JumpProvider と Rigidbody 版の RigidbodyJumpProvider を比較しつつ、Rigidbody 版の詳細を確認していく。 概要 項目JumpProvider (XRIT)RigidbodyJumpProvider基底クラスLocomotionProvider + IGravityControllerMonoBehaviour依存コンポーネントGravityProvider（必須）Rigidbody + CapsuleCollider + XRInputButtonReaderジャンプ物理モデル毎フレーム ... ]]></description>
+    <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>ContinuousTurnProvider と RigidbodyContinuousTurnProvider の比較</title>
+    <link>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/04-continuous-turn-provider-vs-rigidbody-continuous-turn-provider</link>
+    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/04-continuous-turn-provider-vs-rigidbody-continuous-turn-provider</guid>
+    <description><![CDATA[ ここでは、「連続回転」の処理について、XRIT の ContinuousTurnProvider と Rigidbody 版の RigidbodyContinuousTurnProvider を比較しつつ、Rigidbody 版の詳細を確認していく。 概要 項目ContinuousTurnProvider (XRIT)RigidbodyContinuousTurnProvider基底クラスLocomotionProviderRigidbodyTurnProviderBase（abstract MonoBehaviour）回転の適用XRBodyYawRotation → XRBodyTransf... ]]></description>
+    <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>SnapTurnProvider と RigidbodySnapTurnProvider の比較</title>
+    <link>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/05-snap-turn-provider-vs-rigidbody-snap-turn-provider</link>
+    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/05-snap-turn-provider-vs-rigidbody-snap-turn-provider</guid>
+    <description><![CDATA[ ここでは、「スナップ回転」の処理について、XRIT の SnapTurnProvider と Rigidbody 版の RigidbodySnapTurnProvider を比較しつつ、Rigidbody 版の詳細を確認していく。 概要 項目SnapTurnProvider (XRIT)RigidbodySnapTurnProvider基底クラスLocomotionProviderMonoBehaviour回転の適用XRBodyYawRotation → XRBodyTransformer が Transform 回転rb.MovePosition() + rb.MoveRotation()ピ... ]]></description>
+    <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>XR Interaction Toolkit の移動システムの詳細</title>
+    <link>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/06-xr-interaction-toolkit-locomotion-detail</link>
+    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/06-xr-interaction-toolkit-locomotion-detail</guid>
+    <description><![CDATA[ 概要 このドキュメントでは、Unity XR Interaction Toolkit (3.3.0) における移動(Locomotion)システム、特にDynamicMoveProvider がどのようにVR空間での移動を実現しているかをみていく。 全体アーキテクチャ XR Interaction Toolkit 3.3.0の移動システムは、以下の階層構造を持つ: LocomotionMediator (仲介者) └─ XRBodyTransformer (変換適用者) └─ XRMovableBody (移動可能な身体の抽象化) ├─ XROrigin (実際のVR空間) ├─ IXRBod... ]]></description>
+    <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>XRIT Locomotion と Rigidbody Locomotion の設計比較</title>
+    <link>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/07-xrit-vs-rigidbody-locomotion-comparison</link>
+    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/07-xrit-vs-rigidbody-locomotion-comparison</guid>
+    <description><![CDATA[ ここでは、XRIT と Rigidbody 版の全体的なアーキテクチャの比較をしつつ、ここまで触れていない Grab移動と登りの Rigidbody 版についても確認していく。 1. ]]></description>
+    <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>初級者向けの解説: VR で物理的に移動する</title>
+    <link>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/08-physics-vr-locomotion-beginner-guide</link>
+    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/08-physics-vr-locomotion-beginner-guide</guid>
+    <description><![CDATA[ ここでは、「VR での物理的な移動」の処理について、Rigidbody とコライダーの基本的な部分から初級者向けに解説していく。 Rigidbody Locomotion をライブラリとして使う場合にも、基本的なことを理解しておくと不具合にも対応しやすくなる。 はじめに：VRの中の「体」ってどうなってるの？ VRゴーグルをかぶると、自分が仮想の世界の中に立っているように感じるよね。でも、コンピューターの中の「自分の体」は一体どんな仕組みで動いているんだろう？ このプロジェクトでは、仮想の体を カプセル型のコライダー（当たり判定）と Rigidbody（物理演算） を使って表現しているよ。 まず... ]]></description>
+    <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>doc-nav-extractor の使い方</title>
     <link>https://docs.self-taught-code-tokushima.com/Tools/doc-nav-extractor</link>
     <guid>https://docs.self-taught-code-tokushima.com/Tools/doc-nav-extractor</guid>
     <description><![CDATA[ doc-nav-extractor github.com/self-taught-code-tokushima/doc-nav-extractor 対応するドキュメントサイトのナビゲーションから、そのドキュメントのリンクを抽出します。 導入方法 1. ]]></description>
     <pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Sufo for Windows で管理者権限を使いやすくする</title>
-    <link>https://docs.self-taught-code-tokushima.com/Tools/sudo-for-windows</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Tools/sudo-for-windows</guid>
-    <description><![CDATA[ Sudo for Windows | Microsoft Learn これまで PowerShell 等で管理者権限が必要な操作をする場合は、以下のように「管理者権限で実行」を別途行う必要がありました。 この Sudo for Windows は、Linux の sudo のように、一時的に管理者権限を付与して実行することが可能です。 有効化の方法 特にインストール等は必要なく、設定から有効化するだけです。検索窓で sudo などと入力すれば、この設定がサジェストされるはずです。 ターミナルで以下のように表示されれば成功です。 &gt; sudo sudo for Windows Usage:... ]]></description>
-    <pubDate>Thu, 23 Apr 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Unity+VRゲーム開発ガイド Chapter9 の補完</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/VR/vrlearning-book-chapter9</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/vrlearning-book-chapter9</guid>
-    <description><![CDATA[ 「VRならでは」の体験を作る Unity+VRゲーム開発ガイド | 技術評論社 上記書籍 (初版) の 9 章は Unity の XR Interaction Toolkit の初学者では補完しきれない省略等があるため、ここでは多少構成を変えつつ説明します。 なお、書籍を所持している前提で記載するため、ここだけを読んでも同じことはできないと考えてください。 ただし、Chapter9/10 の内容を実行して体験するだけであれば、サンプルコードの Assets/App/Gun/GunTarget.unity のシーンがそのまま使えます。とても素晴らしいサンプルです。 環境 Unity 6000.3... ]]></description>
-    <pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Unity VR 開発時のトラブルシュート</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/VR/trableshoot-in-development-unity-vr</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/trableshoot-in-development-unity-vr</guid>
-    <description><![CDATA[ 実機実行がうまくいかない コントローラーの場所がおかしい・反応しない XR が読み込まれていないという類の突然何もしていないのに発生するエラー BuildFailedException: No OpenXR loader library found. ]]></description>
-    <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Quest 3 での Meta XR の始め方</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/VR/meta-xr-on-quest3-first-step</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/meta-xr-on-quest3-first-step</guid>
-    <description><![CDATA[ Meta Horizon の Unity スタートガイド 以下から始まるスタートガイドをベースに進めていきます。 Meta Quest VRヘッドセット向けのUnityアプリを開発する | Meta Horizon OS Developers またさらに詳細な情報として以下のスライドが非常に有用です Unity6とMETA XR SDK(v69-83)でQuestアプリ開発 | ドクセル Unity の設定 VR開発用にUnityを設定する | Meta Horizon OS Developers Androidビルドサポートモジュールを追加する 今回は Unity 6000.3.6f1 を使... ]]></description>
-    <pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>2.2 - Activation events</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/2-2_activation_events</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/2-2_activation_events</guid>
-    <description><![CDATA[ 1. ]]></description>
-    <pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>2.3 - Near-Far and Ray Interactors</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/2-3_near-far_and_ray_interactors</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/2-3_near-far_and_ray_interactors</guid>
-    <description><![CDATA[ 1. ]]></description>
-    <pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>1.3 - Grabbable GameObject</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/1-3_grabbable-gameobject</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/1-3_grabbable-gameobject</guid>
-    <description><![CDATA[ 1 Choose hand models 上記から好みの左右の Hand を選び以下のように Sphere の代わりに設定する 2. ]]></description>
-    <pubDate>Tue, 10 Mar 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>1.4 - Sockets</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/1-4_sockets</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/1-4_sockets</guid>
-    <description><![CDATA[ 1. ]]></description>
-    <pubDate>Tue, 10 Mar 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
