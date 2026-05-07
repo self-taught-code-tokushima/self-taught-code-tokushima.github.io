@@ -6,6 +6,12 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Windows での Microsoft Defender からの除外</title>
+    <link>https://docs.self-taught-code-tokushima.com/Tools/ignore-folder-from-ms-defender</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Tools/ignore-folder-from-ms-defender</guid>
+    <description><![CDATA[ Windows での Microsoft Defender からの除外 環境 Windows 11 Home Microsoft Defender のマルウェアチェック処理 タスクマネージャーを参照すると、以下のような Antimalware Service Executable が CPU を使っていることがあるのに気づくかもしれません。 これ自体は、ダウンロード等で追加されたファイルなどがマルウェアに侵されていないかをチェックするために重要なのですが、ゲーム開発のアセット追加時のように大量のファイルを追加する場合はそれだけで時間を使ってしまいます。 ゲームエンジンの場合はビルド時にもファイ... ]]></description>
+    <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>doc-nav-extractor の使い方</title>
     <link>https://docs.self-taught-code-tokushima.com/Tools/doc-nav-extractor</link>
     <guid>https://docs.self-taught-code-tokushima.com/Tools/doc-nav-extractor</guid>
@@ -57,12 +63,6 @@
     <title>1.4 - Sockets</title>
     <link>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/1-4_sockets</link>
     <guid>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/1-4_sockets</guid>
-    <description><![CDATA[ 1. ]]></description>
-    <pubDate>Tue, 10 Mar 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>2.1 - Audio and Haptics</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/2-1_audio_and_haptics</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/create-with-vr-course/2-1_audio_and_haptics</guid>
     <description><![CDATA[ 1. ]]></description>
     <pubDate>Tue, 10 Mar 2026 00:00:00 GMT</pubDate>
   </item>
