@@ -6,6 +6,48 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AI での 3D モデル生成の概要</title>
+    <link>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/00_Overview</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/00_Overview</guid>
+    <description><![CDATA[ 前提 ここでの一連の作業は以下を前提とします。 2026年6月現在に利用可能なサービス・モデルを利用する 数ヶ月後には使えなくなっている可能性がある 無料の範囲で利用できるもののみを使う 数ヶ月後には有料のサービスになっていたり、サービスを終了している可能性がある プロトタイプレベルの仕上がりを目指す 当然ながら、生成AI だけで商用レベルの全く破綻の無いものは現状作れない 動作確認用、またはモデルが破綻していても気にならないモブキャラ用など プロトタイプ用ではありますが、学生の皆さんが Unityroom 等で個人で公開するフリーゲームの素材として使う分には全く問題ありません。全く手直しせず... ]]></description>
+    <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>1. リファレンス画像の収集</title>
+    <link>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/01_Reference_Images</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/01_Reference_Images</guid>
+    <description><![CDATA[ ここでは、Google の Nano Banana を使います。 Google AI Studio aistudio.google.com/ Nano Banana は Gemini の画像生成としても使えますが、Google AI Studio を使うとシンプルに画像生成だけを利用できます。 Rate Limit はあるものの、Nano Banana は無料で利用できます。 キャラクターイメージの生成 ここに関しては、皆さんの想像力・語彙力がもっとも重要な部分です。 Nano Banana のプロンプト方法の究極ガイド | Google Cloud 公式ブログ 基本となるのは、「余計な文言は... ]]></description>
+    <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>2. 3D モデルの生成</title>
+    <link>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/02_Generate_3D_Model</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/02_Generate_3D_Model</guid>
+    <description><![CDATA[ Hunyuan 3D Studio (HY 3D Studio) 3d.hunyuanglobal.com/studio メールでの認証が必要です。このサービスは最初から Limited-time Benefits となっているので、いつ無料利用が終了するかは分かりません。 全身の生成 一回目の生成では片側メガネのはずが、かなり大きいメガネになってしまいました。 メガネを外した正面の画像を Google AI Studio で生成し直し、右の結果になりました。 メガネがおかしいメガネ無しの画像を用意して再生成顔や手のディテールはあまりありません。よりリアルなモデルを作りたい場合には個別に生成し... ]]></description>
+    <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>4. 3D モデルの UV 展開</title>
+    <link>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/04_UV_unwrapping</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/04_UV_unwrapping</guid>
+    <description><![CDATA[ 全身の UV 展開 HY 3D Studio で進められます。 細かくなりすぎずに分割できています。 . ]]></description>
+    <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>5. 3D モデルのテクスチャリング</title>
+    <link>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/05_Texturing</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/05_Texturing</guid>
+    <description><![CDATA[ 全身をテクスチャリング HY 3D Studio で進められます。 全体的に悪くありませんが、手の裏が汚いですね。これは下面図が必要そうです。 下からの図を追加しましたがあまり改善しません。 ここではこのまま進めます。 . ]]></description>
+    <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>06. リギング</title>
+    <link>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/06_Rigging</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/06_Rigging</guid>
+    <description><![CDATA[ 自動リギングツール 自動リギングツールとしては有名なものにこの 2 つがあります。 actorcore.reallusion.com/auto-rig/accurig www.mixamo.com/#/ 3D モデル生成ツールにはリギングも行ってくれるものがあるので、それをそのまま使ってもいいと思います。 Blender の場合は [Auto-Rig Pro](Auto-Rig Pro - Superhive (formerly Blender Market)) という有名なアドオンもあります。 AccuRIG GMail でのログインが必要です。 Hunyuan 3D Studio からダウ... ]]></description>
+    <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>07. ゲームエンジンにインポートする</title>
+    <link>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/07_Import_to_a_GameEngine</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/07_Import_to_a_GameEngine</guid>
+    <description><![CDATA[ Unity の場合 FBX をインポートする インポートデータの適用 Material を修正する Extract Textures / Extract Materials をクリックマテリアルとテクスチャが外に出るNormal がおかしいので Fix Now Rig を Humanoid に変更 Animation Type を Humanoid に変更Apply ボタンaccurig_rigged_unityAvatar が作成される 動作確認 簡単に動きを確認するために Starter Assets で使えるようにします。 Starter Assets と Cinemachine を導入... ]]></description>
+    <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>Windows での Microsoft Defender からの除外</title>
     <link>https://docs.self-taught-code-tokushima.com/Tools/ignore-folder-from-ms-defender</link>
     <guid>https://docs.self-taught-code-tokushima.com/Tools/ignore-folder-from-ms-defender</guid>
@@ -23,48 +65,6 @@
     <guid>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/02-dynamic-vs-rigidbody-move-provider</guid>
     <description><![CDATA[ ここでは、「移動」の処理について、XRIT の DynamicMoveProvider と Rigidbody 版の RigidbodyMoveProvider を比較しつつ、Rigidbody 版の詳細を確認していく。 概要 項目DynamicMoveProviderRigidbodyMoveProvider基底クラスContinuousMoveProvider → LocomotionProviderMonoBehaviour物理コンポーネントCharacterControllerRigidbody + CapsuleCollider移動適用Update() 内で XROriginMove... ]]></description>
     <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>03. JumpProvider と RigidbodyJumpProvider の比較</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/03-jump-provider-vs-rigidbody-jump-provider</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/03-jump-provider-vs-rigidbody-jump-provider</guid>
-    <description><![CDATA[ ここでは、「ジャンプ」の処理について、XRIT の JumpProvider と Rigidbody 版の RigidbodyJumpProvider を比較しつつ、Rigidbody 版の詳細を確認していく。 概要 項目JumpProvider (XRIT)RigidbodyJumpProvider基底クラスLocomotionProvider + IGravityControllerMonoBehaviour依存コンポーネントGravityProvider（必須）Rigidbody + CapsuleCollider + XRInputButtonReaderジャンプ物理モデル毎フレーム ... ]]></description>
-    <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>04. ContinuousTurnProvider と RigidbodyContinuousTurnProvider の比較</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/04-continuous-turn-provider-vs-rigidbody-continuous-turn-provider</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/04-continuous-turn-provider-vs-rigidbody-continuous-turn-provider</guid>
-    <description><![CDATA[ ここでは、「連続回転」の処理について、XRIT の ContinuousTurnProvider と Rigidbody 版の RigidbodyContinuousTurnProvider を比較しつつ、Rigidbody 版の詳細を確認していく。 概要 項目ContinuousTurnProvider (XRIT)RigidbodyContinuousTurnProvider基底クラスLocomotionProviderRigidbodyTurnProviderBase（abstract MonoBehaviour）回転の適用XRBodyYawRotation → XRBodyTransf... ]]></description>
-    <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>05. SnapTurnProvider と RigidbodySnapTurnProvider の比較</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/05-snap-turn-provider-vs-rigidbody-snap-turn-provider</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/05-snap-turn-provider-vs-rigidbody-snap-turn-provider</guid>
-    <description><![CDATA[ ここでは、「スナップ回転」の処理について、XRIT の SnapTurnProvider と Rigidbody 版の RigidbodySnapTurnProvider を比較しつつ、Rigidbody 版の詳細を確認していく。 概要 項目SnapTurnProvider (XRIT)RigidbodySnapTurnProvider基底クラスLocomotionProviderMonoBehaviour回転の適用XRBodyYawRotation → XRBodyTransformer が Transform 回転rb.MovePosition() + rb.MoveRotation()ピ... ]]></description>
-    <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>06. XR Interaction Toolkit の移動システムの詳細</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/06-xr-interaction-toolkit-locomotion-detail</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/06-xr-interaction-toolkit-locomotion-detail</guid>
-    <description><![CDATA[ 概要 このドキュメントでは、Unity XR Interaction Toolkit (3.3.0) における移動(Locomotion)システム、特にDynamicMoveProvider がどのようにVR空間での移動を実現しているかをみていく。 全体アーキテクチャ XR Interaction Toolkit 3.3.0の移動システムは、以下の階層構造を持つ: LocomotionMediator (仲介者) └─ XRBodyTransformer (変換適用者) └─ XRMovableBody (移動可能な身体の抽象化) ├─ XROrigin (実際のVR空間) ├─ IXRBod... ]]></description>
-    <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>07. XRIT Locomotion と Rigidbody Locomotion の設計比較</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/07-xrit-vs-rigidbody-locomotion-comparison</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/07-xrit-vs-rigidbody-locomotion-comparison</guid>
-    <description><![CDATA[ ここでは、XRIT と Rigidbody 版の全体的なアーキテクチャの比較をしつつ、ここまで触れていない Grab移動と登りの Rigidbody 版についても確認していく。 1. ]]></description>
-    <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>08. 初級者向けの解説: VR で物理的に移動する</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/08-physics-vr-locomotion-beginner-guide</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/08-physics-vr-locomotion-beginner-guide</guid>
-    <description><![CDATA[ ここでは、「VR での物理的な移動」の処理について、Rigidbody とコライダーの基本的な部分から初級者向けに解説していく。 Rigidbody Locomotion をライブラリとして使う場合にも、基本的なことを理解しておくと不具合にも対応しやすくなる。 はじめに：VRの中の「体」ってどうなってるの？ VRゴーグルをかぶると、自分が仮想の世界の中に立っているように感じるよね。でも、コンピューターの中の「自分の体」は一体どんな仕組みで動いているんだろう？ このプロジェクトでは、仮想の体を カプセル型のコライダー（当たり判定）と Rigidbody（物理演算） を使って表現しているよ。 まず... ]]></description>
-    <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>doc-nav-extractor の使い方</title>
-    <link>https://docs.self-taught-code-tokushima.com/Tools/doc-nav-extractor</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Tools/doc-nav-extractor</guid>
-    <description><![CDATA[ doc-nav-extractor github.com/self-taught-code-tokushima/doc-nav-extractor 対応するドキュメントサイトのナビゲーションから、そのドキュメントのリンクを抽出します。 導入方法 1. ]]></description>
-    <pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
