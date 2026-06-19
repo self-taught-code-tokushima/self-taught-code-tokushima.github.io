@@ -6,6 +6,12 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>OpenCode の Windows へのインストール</title>
+    <link>https://docs.self-taught-code-tokushima.com/Tools/opencode-windows</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Tools/opencode-windows</guid>
+    <description><![CDATA[ 🚧 執筆時はまだデスクトップ版がベータなので、ターミナル版について記載しています インストール OpenCode | ダウンロード npm i -g opencode-ai Node.js のインストールがまだの場合は nodejs-with-nvm-windows を参照してください。 opencode インストールが完了し、上記のコマンドを打つと、opencode が起動します。 設定ファイル %USERPROFILE%\.config\opencode に設定ファイルの保存場所があります。 そこにある opencode.jsonc がメインの設定ファイルです。 おそらく最初は以下のよう... ]]></description>
+    <pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>AI での 3D モデル生成の概要</title>
     <link>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/00_Overview</link>
     <guid>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/00_Overview</guid>
@@ -59,12 +65,6 @@
     <guid>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/01-project-overview</guid>
     <description><![CDATA[ プロジェクトリポジトリ self-taught-code-tokushima/UnityVR_SimplePhysicsLocomotion 目的 Unity の XR Interaction Toolkit（XRIT）は、VR 向けの移動（Move）・ジャンプ（Jump）・回転（Turn）をすぐに使える LocomotionProvider として提供している。 このプロジェクトでは、物理ベースのハンドトラッキング（物理の手） を実現するために XR Origin に Rigidbody を付けた。すると標準の Locomotion システムが動かなくなった。 原因を一言で言えば： 「XRI... ]]></description>
     <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>02. DynamicMoveProvider と RigidbodyMoveProvider の比較</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/02-dynamic-vs-rigidbody-move-provider</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/02-dynamic-vs-rigidbody-move-provider</guid>
-    <description><![CDATA[ ここでは、「移動」の処理について、XRIT の DynamicMoveProvider と Rigidbody 版の RigidbodyMoveProvider を比較しつつ、Rigidbody 版の詳細を確認していく。 概要 項目DynamicMoveProviderRigidbodyMoveProvider基底クラスContinuousMoveProvider → LocomotionProviderMonoBehaviour物理コンポーネントCharacterControllerRigidbody + CapsuleCollider移動適用Update() 内で XROriginMove... ]]></description>
-    <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
