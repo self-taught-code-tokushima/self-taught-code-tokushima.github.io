@@ -6,6 +6,12 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Windows に Node.js をインストールする</title>
+    <link>https://docs.self-taught-code-tokushima.com/Tools/installing-nodejs-to-windows</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Tools/installing-nodejs-to-windows</guid>
+    <description><![CDATA[ nvm を使って複数バージョンを管理する場合はこちら nodejs-with-nvm-windows Node.js を Windows にインストールする Linux や macOS の場合は多くのインストールの選択肢がありますが、Windows の場合は標準的な方法がインストーラーを使ったものしかありません。 複数バージョンを管理する nvm 複数バージョンの Node.js を管理する nvm (Node version manager) は Windows にも実装がいくつか存在しますが、いずれも開発はアクティブではありません。 nodejs-with-nvm-windows で利用し... ]]></description>
+    <pubDate>Fri, 19 Jun 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>OpenCode の Windows へのインストール</title>
     <link>https://docs.self-taught-code-tokushima.com/Tools/opencode-windows</link>
     <guid>https://docs.self-taught-code-tokushima.com/Tools/opencode-windows</guid>
@@ -58,12 +64,6 @@
     <link>https://docs.self-taught-code-tokushima.com/Tools/ignore-folder-from-ms-defender</link>
     <guid>https://docs.self-taught-code-tokushima.com/Tools/ignore-folder-from-ms-defender</guid>
     <description><![CDATA[ Windows での Microsoft Defender からの除外 環境 Windows 11 Home Microsoft Defender のマルウェアチェック処理 タスクマネージャーを参照すると、以下のような Antimalware Service Executable が CPU を使っていることがあるのに気づくかもしれません。 これ自体は、ダウンロード等で追加されたファイルなどがマルウェアに侵されていないかをチェックするために重要なのですが、ゲーム開発のアセット追加時のように大量のファイルを追加する場合はそれだけで時間を使ってしまいます。 ゲームエンジンの場合はビルド時にもファイ... ]]></description>
-    <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>01. Unity VR の Rigidbody Locomotion プロジェクトの概要</title>
-    <link>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/01-project-overview</link>
-    <guid>https://docs.self-taught-code-tokushima.com/unity/VR/rigidbody-locomotion/01-project-overview</guid>
-    <description><![CDATA[ プロジェクトリポジトリ self-taught-code-tokushima/UnityVR_SimplePhysicsLocomotion 目的 Unity の XR Interaction Toolkit（XRIT）は、VR 向けの移動（Move）・ジャンプ（Jump）・回転（Turn）をすぐに使える LocomotionProvider として提供している。 このプロジェクトでは、物理ベースのハンドトラッキング（物理の手） を実現するために XR Origin に Rigidbody を付けた。すると標準の Locomotion システムが動かなくなった。 原因を一言で言えば： 「XRI... ]]></description>
     <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
