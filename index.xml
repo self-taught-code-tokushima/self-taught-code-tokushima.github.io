@@ -18,6 +18,12 @@
     <description><![CDATA[ 利用ポートを調べる # ポートが 8080 の場合 Get-NetTCPConnection -LocalPort 8080 # 利用しているプロセスだけ知りたい Get-NetTCPConnection -LocalPort 8080 | Select-Object OwningProcess Windows PowerShellでポートを使用しているプロセスを特定し、終了する方法 Windows - Qiita シンボリックリンク New-Item -ItemType SymbolicLink -Path リンク先 -Value リンク元 New-Item (Microsoft.Power... ]]></description>
     <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
   </item><item>
+    <title>Minecraft BE 開発関連の資料</title>
+    <link>https://docs.self-taught-code-tokushima.com/minecraft/minecraft-docs-and-references</link>
+    <guid>https://docs.self-taught-code-tokushima.com/minecraft/minecraft-docs-and-references</guid>
+    <description><![CDATA[ Microsoft Learn Minecraft: Bedrock Edition Creator Documentation | Microsoft Learn ポータルサイト。各種ドキュメント、サンプルやトレーニングへのリンクが集まっている。 Script API Reference Documentation | Microsoft Learn Script API のリファレンス 内部には以下の完全な API ドキュメンテーションもある Reference Documentation Overview | Microsoft Learn Bedrock Wiki &amp; bedr... ]]></description>
+    <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>Windows に Node.js をインストールする</title>
     <link>https://docs.self-taught-code-tokushima.com/Tools/installing-nodejs-to-windows</link>
     <guid>https://docs.self-taught-code-tokushima.com/Tools/installing-nodejs-to-windows</guid>
@@ -58,12 +64,6 @@
     <link>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/05_Texturing</link>
     <guid>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/05_Texturing</guid>
     <description><![CDATA[ 全身をテクスチャリング HY 3D Studio で進められます。 全体的に悪くありませんが、手の裏が汚いですね。これは下面図が必要そうです。 下からの図を追加しましたがあまり改善しません。 ここではこのまま進めます。 . ]]></description>
-    <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>06. リギング</title>
-    <link>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/06_Rigging</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/06_Rigging</guid>
-    <description><![CDATA[ 自動リギングツール 自動リギングツールとしては有名なものにこの 2 つがあります。 actorcore.reallusion.com/auto-rig/accurig www.mixamo.com/#/ 3D モデル生成ツールにはリギングも行ってくれるものがあるので、それをそのまま使ってもいいと思います。 Blender の場合は [Auto-Rig Pro](Auto-Rig Pro - Superhive (formerly Blender Market)) という有名なアドオンもあります。 AccuRIG GMail でのログインが必要です。 Hunyuan 3D Studio からダウ... ]]></description>
     <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
