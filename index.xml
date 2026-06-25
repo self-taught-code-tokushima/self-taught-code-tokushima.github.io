@@ -6,6 +6,12 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>ローカルで利用できる LLM を調べるツール</title>
+    <link>https://docs.self-taught-code-tokushima.com/AI/local-llm</link>
+    <guid>https://docs.self-taught-code-tokushima.com/AI/local-llm</guid>
+    <description><![CDATA[ ここでは、皆さんのローカルで利用できる LLM を探すためのツールを紹介します。 uv や node がインストールされている PCであれば、インストールされている方で whichllm や LLM Checker を実行した方が面白い結果を得られると思います。 ブラウザから GPU を指定してさっと確認したい場合は Can I Run AI locally? を実行してみてください。 あくまで参考としていろいろ調べてみてください 初めてローカル LLM を触るような場合には、情報が多すぎて何を選べばいいかわからないと思います。 インターネットにある「使ってみた」モデルは、自分の PC に合わ... ]]></description>
+    <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>Windows に Node.js をインストールする</title>
     <link>https://docs.self-taught-code-tokushima.com/Tools/installing-nodejs-to-windows</link>
     <guid>https://docs.self-taught-code-tokushima.com/Tools/installing-nodejs-to-windows</guid>
@@ -59,12 +65,6 @@
     <guid>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/07_Import_to_a_GameEngine</guid>
     <description><![CDATA[ Unity の場合 FBX をインポートする インポートデータの適用 Material を修正する Extract Textures / Extract Materials をクリックマテリアルとテクスチャが外に出るNormal がおかしいので Fix Now Rig を Humanoid に変更 Animation Type を Humanoid に変更Apply ボタンaccurig_rigged_unityAvatar が作成される 動作確認 簡単に動きを確認するために Starter Assets で使えるようにします。 Starter Assets と Cinemachine を導入... ]]></description>
     <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Windows での Microsoft Defender からの除外</title>
-    <link>https://docs.self-taught-code-tokushima.com/Tools/ignore-folder-from-ms-defender</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Tools/ignore-folder-from-ms-defender</guid>
-    <description><![CDATA[ Windows での Microsoft Defender からの除外 環境 Windows 11 Home Microsoft Defender のマルウェアチェック処理 タスクマネージャーを参照すると、以下のような Antimalware Service Executable が CPU を使っていることがあるのに気づくかもしれません。 これ自体は、ダウンロード等で追加されたファイルなどがマルウェアに侵されていないかをチェックするために重要なのですが、ゲーム開発のアセット追加時のように大量のファイルを追加する場合はそれだけで時間を使ってしまいます。 ゲームエンジンの場合はビルド時にもファイ... ]]></description>
-    <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
