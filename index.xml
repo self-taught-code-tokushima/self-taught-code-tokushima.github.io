@@ -12,6 +12,12 @@
     <description><![CDATA[ ここでは、皆さんのローカルで利用できる LLM を探すためのツールを紹介します。 uv や node がインストールされている PCであれば、インストールされている方で whichllm や LLM Checker を実行した方が面白い結果を得られると思います。 ブラウザから GPU を指定してさっと確認したい場合は Can I Run AI locally? を実行してみてください。 あくまで参考としていろいろ調べてみてください 初めてローカル LLM を触るような場合には、情報が多すぎて何を選べばいいかわからないと思います。 インターネットにある「使ってみた」モデルは、自分の PC に合わ... ]]></description>
     <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
   </item><item>
+    <title>PowerShell コマンド</title>
+    <link>https://docs.self-taught-code-tokushima.com/Tools/powershell-commands</link>
+    <guid>https://docs.self-taught-code-tokushima.com/Tools/powershell-commands</guid>
+    <description><![CDATA[ 利用ポートを調べる # ポートが 8080 の場合 Get-NetTCPConnection -LocalPort 8080 # 利用しているプロセスだけ知りたい Get-NetTCPConnection -LocalPort 8080 | Select-Object OwningProcess Windows PowerShellでポートを使用しているプロセスを特定し、終了する方法 Windows - Qiita シンボリックリンク New-Item -ItemType SymbolicLink -Path リンク先 -Value リンク元 New-Item (Microsoft.Power... ]]></description>
+    <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>Windows に Node.js をインストールする</title>
     <link>https://docs.self-taught-code-tokushima.com/Tools/installing-nodejs-to-windows</link>
     <guid>https://docs.self-taught-code-tokushima.com/Tools/installing-nodejs-to-windows</guid>
@@ -58,12 +64,6 @@
     <link>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/06_Rigging</link>
     <guid>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/06_Rigging</guid>
     <description><![CDATA[ 自動リギングツール 自動リギングツールとしては有名なものにこの 2 つがあります。 actorcore.reallusion.com/auto-rig/accurig www.mixamo.com/#/ 3D モデル生成ツールにはリギングも行ってくれるものがあるので、それをそのまま使ってもいいと思います。 Blender の場合は [Auto-Rig Pro](Auto-Rig Pro - Superhive (formerly Blender Market)) という有名なアドオンもあります。 AccuRIG GMail でのログインが必要です。 Hunyuan 3D Studio からダウ... ]]></description>
-    <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>07. ゲームエンジンにインポートする</title>
-    <link>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/07_Import_to_a_GameEngine</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/07_Import_to_a_GameEngine</guid>
-    <description><![CDATA[ Unity の場合 FBX をインポートする インポートデータの適用 Material を修正する Extract Textures / Extract Materials をクリックマテリアルとテクスチャが外に出るNormal がおかしいので Fix Now Rig を Humanoid に変更 Animation Type を Humanoid に変更Apply ボタンaccurig_rigged_unityAvatar が作成される 動作確認 簡単に動きを確認するために Starter Assets で使えるようにします。 Starter Assets と Cinemachine を導入... ]]></description>
     <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
