@@ -15,7 +15,7 @@
     <title>OpenCode の Windows へのインストール</title>
     <link>https://docs.self-taught-code-tokushima.com/Tools/opencode-windows</link>
     <guid>https://docs.self-taught-code-tokushima.com/Tools/opencode-windows</guid>
-    <description><![CDATA[ 🚧 執筆時はまだデスクトップ版がベータなので、ターミナル版について記載しています インストール OpenCode | ダウンロード npm i -g opencode-ai Node.js のインストールがまだの場合は nodejs-with-nvm-windows を参照してください。 opencode インストールが完了し、上記のコマンドを打つと、opencode が起動します。 設定ファイル %USERPROFILE%\.config\opencode に設定ファイルの保存場所があります。 そこにある opencode.jsonc がメインの設定ファイルです。 おそらく最初は以下のよう... ]]></description>
+    <description><![CDATA[ 🚧 執筆時はまだデスクトップ版がベータなので、ターミナル版について記載しています インストール OpenCode | ダウンロード npm i -g opencode-ai Node.js のインストールがまだの場合は installing-nodejs-to-windows を参照してください。 opencode インストールが完了し、上記のコマンドを打つと、opencode が起動します。 設定ファイル %USERPROFILE%\.config\opencode に設定ファイルの保存場所があります。 そこにある opencode.jsonc がメインの設定ファイルです。 おそらく最初は... ]]></description>
     <pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate>
   </item><item>
     <title>AI での 3D モデル生成の概要</title>
