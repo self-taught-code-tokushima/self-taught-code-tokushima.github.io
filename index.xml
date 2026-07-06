@@ -6,6 +6,12 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Sciript API の TypeScript 開発環境</title>
+    <link>https://docs.self-taught-code-tokushima.com/minecraft/ScriptAPI/script-api-with-typescript-dev-env</link>
+    <guid>https://docs.self-taught-code-tokushima.com/minecraft/ScriptAPI/script-api-with-typescript-dev-env</guid>
+    <description><![CDATA[ Minecraft Creator Tools (mctools) Minecraft Creator Tools @minecraft/creator-tools - npm Mojang/minecraft-creator-tools: A set of tools for creating content and add-ons for Minecraft Bedrock Edition. ]]></description>
+    <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>ローカルで利用できる LLM を調べるツール</title>
     <link>https://docs.self-taught-code-tokushima.com/AI/local-llm</link>
     <guid>https://docs.self-taught-code-tokushima.com/AI/local-llm</guid>
@@ -58,12 +64,6 @@
     <link>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/04_UV_unwrapping</link>
     <guid>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/04_UV_unwrapping</guid>
     <description><![CDATA[ 全身の UV 展開 HY 3D Studio で進められます。 細かくなりすぎずに分割できています。 . ]]></description>
-    <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>5. 3D モデルのテクスチャリング</title>
-    <link>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/05_Texturing</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/05_Texturing</guid>
-    <description><![CDATA[ 全身をテクスチャリング HY 3D Studio で進められます。 全体的に悪くありませんが、手の裏が汚いですね。これは下面図が必要そうです。 下からの図を追加しましたがあまり改善しません。 ここではこのまま進めます。 . ]]></description>
     <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
