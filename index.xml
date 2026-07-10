@@ -6,6 +6,12 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>STC/T Resources</title>
+    <link>https://docs.self-taught-code-tokushima.com/</link>
+    <guid>https://docs.self-taught-code-tokushima.com/</guid>
+    <description><![CDATA[ STC/T Resources Self-Taught CODE Tokushima のリソースサイトへようこそ。 カテゴリ Unity - Unity ゲーム開発に関するドキュメント UnrealEngine - Unreal Engine ゲーム開発に関するドキュメント Minecraft - Minecraft 関連のドキュメント Roblox - Roblox 開発に関するドキュメント Tools - 各種ツールの使い方 Research - 調査・研究 . ]]></description>
+    <pubDate>Fri, 10 Jul 2026 07:43:48 GMT</pubDate>
+  </item><item>
     <title>Blockbench MCP サーバーの使い方</title>
     <link>https://docs.self-taught-code-tokushima.com/minecraft/Blockbench/blockbench-mcp</link>
     <guid>https://docs.self-taught-code-tokushima.com/minecraft/Blockbench/blockbench-mcp</guid>
@@ -58,12 +64,6 @@
     <link>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/01_Reference_Images</link>
     <guid>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/01_Reference_Images</guid>
     <description><![CDATA[ ここでは、Google の Nano Banana を使います。 Google AI Studio aistudio.google.com/ Nano Banana は Gemini の画像生成としても使えますが、Google AI Studio を使うとシンプルに画像生成だけを利用できます。 Rate Limit はあるものの、Nano Banana は無料で利用できます。 キャラクターイメージの生成 ここに関しては、皆さんの想像力・語彙力がもっとも重要な部分です。 Nano Banana のプロンプト方法の究極ガイド | Google Cloud 公式ブログ 基本となるのは、「余計な文言は... ]]></description>
-    <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>2. 3D モデルの生成</title>
-    <link>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/02_Generate_3D_Model</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/02_Generate_3D_Model</guid>
-    <description><![CDATA[ Hunyuan 3D Studio (HY 3D Studio) 3d.hunyuanglobal.com/studio メールでの認証が必要です。このサービスは最初から Limited-time Benefits となっているので、いつ無料利用が終了するかは分かりません。 全身の生成 一回目の生成では片側メガネのはずが、かなり大きいメガネになってしまいました。 メガネを外した正面の画像を Google AI Studio で生成し直し、右の結果になりました。 メガネがおかしいメガネ無しの画像を用意して再生成顔や手のディテールはあまりありません。よりリアルなモデルを作りたい場合には個別に生成し... ]]></description>
     <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
