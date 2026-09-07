@@ -6,6 +6,12 @@
       <description>最新の10件 on Self-Taught CODE Tokushima Resources</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>教育版と統合版のワークフロー</title>
+    <link>https://docs.self-taught-code-tokushima.com/minecraft/education-bedrock-workflow</link>
+    <guid>https://docs.self-taught-code-tokushima.com/minecraft/education-bedrock-workflow</guid>
+    <description><![CDATA[ Minecraft 教育版と統合版のファイルの相互移行 教育版と統合版はベースは同じであるものの、そのままではインポートすることができません。 マインクラフトカップの作品等は公開されていますが、教育版であるため統合版では開くことができません。 一方で、教育版は学校での利用や CoderDojo のような場所が近所になければ利用するのは (費用面でも) 簡単ではありません。 完全にインポートできるわけではない 当然ながら、教育版には統合版とは異なる要素が含まれていますし、統合版は教育版よりもリリースも先に行われているため、ある時点では教育版には無い要素があります。 そのため、インポートしたときに... ]]></description>
+    <pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate>
+  </item><item>
     <title>リファレンスボードツール</title>
     <link>https://docs.self-taught-code-tokushima.com/Tools/reference-board-tools</link>
     <guid>https://docs.self-taught-code-tokushima.com/Tools/reference-board-tools</guid>
@@ -59,12 +65,6 @@
     <guid>https://docs.self-taught-code-tokushima.com/Tools/opencode-windows</guid>
     <description><![CDATA[ 🚧 執筆時はまだデスクトップ版がベータなので、ターミナル版について記載しています インストール OpenCode | ダウンロード npm i -g opencode-ai Node.js のインストールがまだの場合は installing-nodejs-to-windows を参照してください。 opencode インストールが完了し、上記のコマンドを打つと、opencode が起動します。 設定ファイル %USERPROFILE%\.config\opencode に設定ファイルの保存場所があります。 そこにある opencode.jsonc がメインの設定ファイルです。 おそらく最初は... ]]></description>
     <pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>AI での 3D モデル生成の概要</title>
-    <link>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/00_Overview</link>
-    <guid>https://docs.self-taught-code-tokushima.com/Art/3D-AI-202606/00_Overview</guid>
-    <description><![CDATA[ 前提 ここでの一連の作業は以下を前提とします。 2026年6月現在に利用可能なサービス・モデルを利用する 数ヶ月後には使えなくなっている可能性がある 無料の範囲で利用できるもののみを使う 数ヶ月後には有料のサービスになっていたり、サービスを終了している可能性がある プロトタイプレベルの仕上がりを目指す 当然ながら、生成AI だけで商用レベルの全く破綻の無いものは現状作れない 動作確認用、またはモデルが破綻していても気にならないモブキャラ用など プロトタイプ用ではありますが、学生の皆さんが Unityroom 等で個人で公開するフリーゲームの素材として使う分には全く問題ありません。全く手直しせず... ]]></description>
-    <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
